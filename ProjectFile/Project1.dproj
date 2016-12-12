@@ -96,7 +96,7 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="..\Forms\LoginPage\Login_Page.pas">
+        <DCCReference Include="..\Forms\LoginPage\LoginPage.pas">
             <Form>LoginPageForm</Form>
             <FormType>fmx</FormType>
         </DCCReference>
@@ -106,6 +106,14 @@
         </DCCReference>
         <DCCReference Include="..\Forms\ProcessObject\ProcessObject.pas">
             <Form>ProcessObjectForm</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Forms\FrontPage\FrontPage.pas">
+            <Form>FrontPageForm</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Forms\ProcessFace\ProcessFace.pas">
+            <Form>Form1</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

@@ -3,25 +3,51 @@ unit FrontPage;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Ani, FMX.Layouts, FMX.Gestures,
-  FMX.StdCtrls, FMX.Controls.Presentation;
+ System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Layouts,
+  FMX.Objects, FMX.ListBox,
+  FMX.Menus, FMX.Media, FMX.Ani, FMX.Gestures, FMX.StdCtrls,
+  FMX.Controls.Presentation;
 
 type
-  TForm1 = class(TForm)
-    StyleBook1: TStyleBook;
-    ToolbarHolder: TLayout;
+  TFrontPageForm = class(TForm)
+    MainLayout: TLayout;
+   ToolbarHolder: TLayout;
     ToolbarPopup: TPopup;
-    ToolbarPopupAnimation: TFloatAnimation;
     ToolBar1: TToolBar;
     ToolbarApplyButton: TButton;
     ToolbarCloseButton: TButton;
     ToolbarAddButton: TButton;
+    ToolbarPopupAnimation: TFloatAnimation;
+
+    HeaderLayout: TLayout;
+    TitleLabel1: TLabel;
+    HorzScrollBox1: THorzScrollBox;
+    GroupLayout1: TLayout;
+    ListBox1: TListBox;
+    MetroListBoxItem6: TMetropolisUIListBoxItem;
+    MetroListBoxItem1: TMetropolisUIListBoxItem;
+    MetroListBoxItem2: TMetropolisUIListBoxItem;
+    GroupTitle1: TLabel;
+    GroupLayout2: TLayout;
+    ListBox2: TListBox;
+    MetroListBoxItem3: TMetropolisUIListBoxItem;
+    MetroListBoxItem4: TMetropolisUIListBoxItem;
+    GroupTitle2: TLabel;
+    GroupLayout3: TLayout;
+    ListBox3: TListBox;
+    MetroListBoxItem7: TMetropolisUIListBoxItem;
+    MetroListBoxItem8: TMetropolisUIListBoxItem;
+    MetroListBoxItem9: TMetropolisUIListBoxItem;
+    GroupTitle3: TLabel;
+   procedure FormMouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure FormGesture(Sender: TObject; const EventInfo: TGestureEventInfo;
+      var Handled: Boolean);
     procedure ToolbarCloseButtonClick(Sender: TObject);
-    procedure FormGesture(Sender: TObject;
-      const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
+    procedure ItemClick(Sender: TObject);
   private
     FGestureOrigin: TPointF;
     FGestureInProgress: Boolean;
@@ -32,25 +58,29 @@ type
   end;
 
 var
-  Form1: TForm1;
+  FrontPageForm: TFrontPageForm;
 
 implementation
+uses Math;
 
 {$R *.fmx}
 
-procedure TForm1.FormKeyDown(Sender: TObject; var Key: Word;
-  var KeyChar: Char; Shift: TShiftState);
+procedure TFrontPageForm.ItemClick(Sender: TObject);
+var
+  Form: TCommonCustomForm;
 begin
-  if Key = vkEscape then
-    ShowToolbar(not ToolbarPopup.IsOpen);
+  Form := Application.GetDeviceForm('DetailView');
+  if Assigned(Form) then
+    Form.Show;
 end;
 
-procedure TForm1.ToolbarCloseButtonClick(Sender: TObject);
+
+procedure TFrontPageForm.ToolbarCloseButtonClick(Sender: TObject);
 begin
   Application.Terminate;
 end;
 
-procedure TForm1.FormGesture(Sender: TObject;
+procedure TFrontPageForm.FormGesture(Sender: TObject;
   const EventInfo: TGestureEventInfo; var Handled: Boolean);
 var
   DX, DY : Single;
@@ -76,7 +106,23 @@ begin
   end
 end;
 
-procedure TForm1.ShowToolbar(AShow: Boolean);
+procedure TFrontPageForm.FormKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
+begin
+  if Key = vkEscape then
+    ShowToolbar(not ToolbarPopup.IsOpen);
+end;
+
+procedure TFrontPageForm.FormMouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  if Button = TMouseButton.mbRight then
+    ShowToolbar(True)
+  else
+    ShowToolbar(False);
+end;
+
+procedure TFrontPageForm.ShowToolbar(AShow: Boolean);
 begin
   ToolbarPopup.Width := ClientWidth;
   ToolbarPopup.PlacementRectangle.Rect := TRectF.Create(0, ClientHeight-ToolbarPopup.Height, ClientWidth-1, ClientHeight-1);
@@ -85,5 +131,7 @@ begin
 
   ToolbarPopup.IsOpen := AShow;
 end;
+
+
 
 end.
