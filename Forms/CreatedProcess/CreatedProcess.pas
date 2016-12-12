@@ -1,4 +1,4 @@
-unit ProcessFace;
+unit CreatedProcess;
 
 interface
 
@@ -10,7 +10,7 @@ uses
   FMX.Ani, FMX.Gestures, FMX.StdCtrls, FMX.Controls.Presentation;
 
 type
-  TProcessFaceForm = class(TForm)
+  TCreatedProcessForm = class(TForm)
     MainLayout: TLayout;
     HeaderLayout: TLayout;
     TitleLabel1: TLabel;
@@ -29,7 +29,7 @@ type
     Label3: TLabel;
     Column3: TLayout;
     Label4: TLabel;
-    ProcessFaceStyle: TStyleBook;
+    CreatedProcessStyle: TStyleBook;
     ToolbarHolder: TLayout;
     ToolbarPopup: TPopup;
     ToolBar1: TToolBar;
@@ -48,6 +48,8 @@ type
 
     procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
+    procedure ToolbarCloseButtonClick(Sender: TObject);
+
   private
     FGestureOrigin: TPointF;
     FGestureInProgress: Boolean;
@@ -58,18 +60,19 @@ type
   end;
 
 var
-  ProcessFaceForm: TProcessFaceForm;
+  CreatedProcessForm: TCreatedProcessForm;
 
 implementation
 
 {$R *.fmx}
 
-procedure TProcessFaceForm.HeaderButtonClick(Sender: TObject);
+procedure TCreatedProcessForm.HeaderButtonClick(Sender: TObject);
 begin
   Close;
 end;
 
-procedure TProcessFaceForm.FormGesture(Sender: TObject;
+
+procedure TCreatedProcessForm.FormGesture(Sender: TObject;
   const EventInfo: TGestureEventInfo; var Handled: Boolean);
 var
   DX, DY : Single;
@@ -96,14 +99,14 @@ begin
 end;
 
 //This will be transferred !
-procedure TProcessFaceForm.FormKeyDown(Sender: TObject; var Key: Word;
+procedure TCreatedProcessForm.FormKeyDown(Sender: TObject; var Key: Word;
   var KeyChar: Char; Shift: TShiftState);
 begin
   if Key = vkEscape then
     Close;
 end;
 //This will be transferred !
-procedure TProcessFaceForm.FormMouseUp(Sender: TObject; Button: TMouseButton;
+procedure TCreatedProcessForm.FormMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Single);
 begin
   if Button = TMouseButton.mbRight then
@@ -112,7 +115,7 @@ begin
     ShowToolbar(False);
 end;
  //This will be transferred !
-procedure TProcessFaceForm.ShowToolbar(AShow: Boolean);
+procedure TCreatedProcessForm.ShowToolbar(AShow: Boolean);
 begin
   ToolbarPopup.Width := ClientWidth;
   ToolbarPopup.PlacementRectangle.Rect := TRectF.Create(0, ClientHeight-ToolbarPopup.Height, ClientWidth-1, ClientHeight-1);
@@ -120,6 +123,11 @@ begin
   ToolbarPopupAnimation.StopValue := 0;
 
   ToolbarPopup.IsOpen := AShow;
+end;
+
+procedure TCreatedProcessForm.ToolbarCloseButtonClick(Sender: TObject);
+begin
+  Close;
 end;
 
 end.

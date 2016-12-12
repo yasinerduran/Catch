@@ -1,14 +1,14 @@
-object ProcessFaceForm: TProcessFaceForm
+object CreatedProcessForm: TCreatedProcessForm
   Left = 0
   Top = 0
   Caption = 'BlankForm'
   ClientHeight = 595
   ClientWidth = 640
-  StyleBook = ProcessFaceStyle
+  StyleBook = CreatedProcessStyle
   FormFactor.Width = 1280
   FormFactor.Height = 1024
   FormFactor.Devices = [Desktop]
-  FormFamily = 'ProcessForm'
+  FormFamily = 'CreatedProcess'
   FullScreen = True
   OnKeyDown = FormKeyDown
   DesignerMasterStyle = 0
@@ -237,7 +237,7 @@ object ProcessFaceForm: TProcessFaceForm
       end
     end
   end
-  object ProcessFaceStyle: TStyleBook
+  object CreatedProcessStyle: TStyleBook
     Styles = <
       item
         ResourcesBin = {
@@ -11925,7 +11925,7 @@ object ProcessFaceForm: TProcessFaceForm
     Size.Height = 70.000000000000000000
     Size.PlatformDefault = False
     Visible = False
-    TabOrder = 1
+    TabOrder = 2
     object ToolbarPopup: TPopup
       Touch.InteractiveGestures = [Pan]
       OnGesture = FormGesture
@@ -11975,6 +11975,7 @@ object ProcessFaceForm: TProcessFaceForm
           Size.PlatformDefault = False
           StyleLookup = 'closebuttontext'
           Text = 'Close'
+          OnClick = ToolbarCloseButtonClick
         end
         object ToolbarAddButton: TButton
           Align = Left

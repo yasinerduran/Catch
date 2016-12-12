@@ -113,7 +113,11 @@
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="..\Forms\ProcessFace\ProcessFace.pas">
-            <Form>Form1</Form>
+            <Form>ProcessFaceForm</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Forms\CreatedProcess\CreatedProcess.pas">
+            <Form>CreatedProcessForm</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
