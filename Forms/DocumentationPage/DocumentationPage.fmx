@@ -1,244 +1,17 @@
-object UserPageForm: TUserPageForm
+object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'BlankForm'
   ClientHeight = 595
   ClientWidth = 640
-  StyleBook = UserPageStyle
+  StyleBook = StyleBook1
   FormFactor.Width = 1280
   FormFactor.Height = 1024
   FormFactor.Devices = [Desktop]
-  FormFamily = 'UserPage'
   FullScreen = True
   OnKeyDown = FormKeyDown
   DesignerMasterStyle = 0
-  object MainLayout: TLayout
-    Align = Contents
-    Margins.Top = 25.000000000000000000
-    Size.Width = 640.000000000000000000
-    Size.Height = 570.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 0
-    object HeaderLayout: TLayout
-      Align = Top
-      Margins.Left = 110.000000000000000000
-      Margins.Top = 10.000000000000000000
-      Margins.Bottom = 10.000000000000000000
-      Position.X = 110.000000000000000000
-      Position.Y = 10.000000000000000000
-      Size.Width = 530.000000000000000000
-      Size.Height = 64.000000000000000000
-      Size.PlatformDefault = False
-      object TitleLabel1: TLabel
-        Align = Left
-        Locked = True
-        Size.Width = 567.000000000000000000
-        Size.Height = 64.000000000000000000
-        Size.PlatformDefault = False
-        StyleLookup = 'pageheaderlabel'
-        TextSettings.Font.Size = 42.000000000000000000
-        TextSettings.FontColor = claNull
-        Text = 'Group Title'
-        object Layout2: TLayout
-          Position.X = -75.000000000000000000
-          Size.Width = 50.000000000000000000
-          Size.Height = 64.000000000000000000
-          Size.PlatformDefault = False
-          object HeaderButton: TButton
-            Align = Center
-            Size.Width = 40.000000000000000000
-            Size.Height = 40.000000000000000000
-            Size.PlatformDefault = False
-            StyleLookup = 'backbutton'
-            TouchTargetExpansion.Left = 10.000000000000000000
-            TouchTargetExpansion.Top = 10.000000000000000000
-            TouchTargetExpansion.Right = 10.000000000000000000
-            TouchTargetExpansion.Bottom = 10.000000000000000000
-            OnClick = HeaderButtonClick
-          end
-        end
-      end
-    end
-    object HorzScrollBox1: THorzScrollBox
-      Align = Client
-      Size.Width = 640.000000000000000000
-      Size.Height = 486.000000000000000000
-      Size.PlatformDefault = False
-      StyleLookup = 'scrollboxstyle'
-      Viewport.Width = 640.000000000000000000
-      Viewport.Height = 470.000000000000000000
-      object Column1: TLayout
-        Align = Left
-        Anchors = [akLeft, akTop]
-        Margins.Left = 120.000000000000000000
-        Margins.Right = 30.000000000000000000
-        Position.X = 120.000000000000000000
-        Size.Width = 500.000000000000000000
-        Size.Height = 470.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 0
-        object ArticleHeaderLayout: TLayout
-          Align = Top
-          Margins.Bottom = 10.000000000000000000
-          Size.Width = 500.000000000000000000
-          Size.Height = 321.000000000000000000
-          Size.PlatformDefault = False
-          object Illustration1: TImageControl
-            Align = MostBottom
-            Margins.Top = 10.000000000000000000
-            Margins.Bottom = 10.000000000000000000
-            Position.Y = 96.000000000000000000
-            Size.Width = 500.000000000000000000
-            Size.Height = 215.000000000000000000
-            Size.PlatformDefault = False
-          end
-          object Layout4: TLayout
-            Align = Client
-            Size.Width = 500.000000000000000000
-            Size.Height = 86.000000000000000000
-            Size.PlatformDefault = False
-            object ItemTitle: TLabel
-              Align = Top
-              Margins.Top = 5.000000000000000000
-              Margins.Bottom = 10.000000000000000000
-              Position.Y = 5.000000000000000000
-              Size.Width = 500.000000000000000000
-              Size.Height = 28.000000000000000000
-              Size.PlatformDefault = False
-              StyleLookup = 'pagesubheaderlabel'
-              TextSettings.Font.Size = 20.000000000000000000
-              TextSettings.FontColor = claNull
-              Text = 'Item Title'
-            end
-            object ItemSubTitle: TLabel
-              Align = Top
-              StyledSettings = [Family, Style, FontColor]
-              Margins.Left = 2.500000000000000000
-              Position.X = 2.500000000000000000
-              Position.Y = 43.000000000000000000
-              Size.Width = 497.500000000000000000
-              Size.Height = 24.000000000000000000
-              Size.PlatformDefault = False
-              StyleLookup = 'pagesubheaderlabel'
-              TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.FontColor = claNull
-              Text = 'Item Subtitle'
-            end
-          end
-        end
-        object Label1: TLabel
-          Align = Top
-          Position.Y = 331.000000000000000000
-          Size.Width = 500.000000000000000000
-          Size.Height = 349.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.FontColor = claNull
-          TextSettings.VertAlign = Leading
-          Text = 
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabit' +
-            'ur aliquet hendrerit ultricies. Quisque pharetra, sapien posuere' +
-            ' rhoncus elementum, sapien enim luctus ligula, ac lobortis liber' +
-            'o elit id eros. Integer urna mi, imperdiet ac viverra at, fermen' +
-            'tum eu justo. Morbi congue elementum arcu nec accumsan. Vestibul' +
-            'um ante ipsum primis in faucibus orci luctus et ultrices posuere' +
-            ' cubilia Curae; Duis non nulla velit, ac tincidunt arcu. Fusce i' +
-            'n mauris orci, nec sodales dui. Etiam pulvinar nulla id mi aliqu' +
-            'et at vestibulum dolor placerat. Suspendisse potenti. Mauris non' +
-            ' est at nisi pulvinar feugiat. Vivamus pellentesque, sem sit ame' +
-            't pulvinar placerat, erat justo dapibus quam, sit amet placerat ' +
-            'risus ipsum elementum nisi. Vestibulum auctor posuere ligula ut ' +
-            'hendrerit. Suspendisse luctus tortor in lacus tristique a sodale' +
-            's ipsum imperdiet. Nunc suscipit iaculis erat eu sodales. Mauris' +
-            ' imperdiet dapibus justo, a euismod augue pretium at. Quisque di' +
-            'am neque, fringilla at blandit vestibulum, ullamcorper quis augu' +
-            'e. '
-        end
-      end
-      object Column2: TLayout
-        Align = Left
-        Anchors = [akLeft, akTop]
-        Margins.Left = 30.000000000000000000
-        Margins.Right = 30.000000000000000000
-        Position.X = 680.000000000000000000
-        Size.Width = 500.000000000000000000
-        Size.Height = 470.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 1
-        object Label2: TLabel
-          Align = Top
-          Size.Width = 500.000000000000000000
-          Size.Height = 265.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.FontColor = claNull
-          TextSettings.VertAlign = Leading
-          Text = 
-            'Sed feugiat, ligula non gravida bibendum, massa mi egestas turpi' +
-            's, non tempor nisl tortor a ante. Integer consequat nulla a maur' +
-            'is ornare eget iaculis elit luctus. Aenean vehicula mauris a nis' +
-            'i tempus ut rutrum massa pretium. Ut at molestie sapien. Cum soc' +
-            'iis natoque penatibus et magnis dis parturient montes, nascetur ' +
-            'ridiculus mus. Sed rutrum, sapien vitae sodales ultrices, dui ma' +
-            'uris laoreet justo, vel vehicula nibh orci vitae ante. Mauris ac' +
-            ' dolor mauris. Nunc consectetur pellentesque luctus. In bibendum' +
-            ', lectus sit amet adipiscing fringilla, risus sem pharetra ante,' +
-            ' ultricies sagittis leo neque non felis. Quisque vehicula, velit' +
-            ' eget sagittis feugiat, ligula nunc sagittis est, sed placerat t' +
-            'ellus nibh vitae sem. Nullam ut rutrum risus. '
-        end
-        object Label3: TLabel
-          Align = Top
-          Position.Y = 265.000000000000000000
-          Size.Width = 500.000000000000000000
-          Size.Height = 248.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.FontColor = claNull
-          TextSettings.VertAlign = Leading
-          Text = 
-            'Donec quis leo ipsum, vel placerat augue. Suspendisse quam purus' +
-            ', tempus et lobortis et, dignissim ac neque. Etiam ligula nisi, ' +
-            'fringilla eget varius vel, varius a nunc. Sed mauris nisl, conva' +
-            'llis id accumsan venenatis, mollis sit amet sem. Sed convallis f' +
-            'aucibus lectus, vitae fringilla orci condimentum a. Vivamus a co' +
-            'ngue quam. Curabitur convallis ante eu turpis accumsan iaculis. ' +
-            'Vivamus laoreet dapibus ultricies. Curabitur egestas euismod nun' +
-            'c, ac hendrerit elit suscipit id. Proin eros dui, dapibus eget f' +
-            'aucibus eget, molestie eu enim. Sed ultrices dignissim placerat.' +
-            ' Vivamus consequat venenatis ligula a vulputate. Phasellus elit ' +
-            'orci, ullamcorper id aliquam quis, fringilla nec diam. '
-        end
-      end
-      object Column3: TLayout
-        Align = Left
-        Anchors = [akLeft, akTop]
-        Margins.Left = 30.000000000000000000
-        Position.X = 1240.000000000000000000
-        Size.Width = 500.000000000000000000
-        Size.Height = 470.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 2
-        object Label4: TLabel
-          Align = Top
-          Size.Width = 500.000000000000000000
-          Size.Height = 217.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.FontColor = claNull
-          TextSettings.VertAlign = Leading
-          Text = 
-            'Proin interdum sagittis leo, sit amet imperdiet nisl malesuada e' +
-            'get. Donec rutrum risus quis lacus dignissim ac lobortis felis p' +
-            'ulvinar. Fusce laoreet, erat ut congue hendrerit, dolor sem cond' +
-            'imentum mauris, vel pellentesque felis lacus ac ante. Donec quis' +
-            ' est quis enim sollicitudin elementum. Fusce vel tellus velit. D' +
-            'onec sagittis, metus auctor fringilla sagittis, diam est digniss' +
-            'im diam, at pharetra massa nisl et ipsum. Mauris interdum gravid' +
-            'a velit, sollicitudin scelerisque quam porta quis. Vestibulum el' +
-            'eifend, quam at luctus sollicitudin, magna neque aliquet sapien,' +
-            ' a posuere quam arcu sed nisi. Vestibulum in ipsum massa'
-        end
-      end
-    end
-  end
-  object UserPageStyle: TStyleBook
+  object StyleBook1: TStyleBook
     Styles = <
       item
         ResourcesBin = {
@@ -11913,20 +11686,18 @@ object UserPageForm: TUserPageForm
           6C436F6C6F720708636C61426C61636B0C50726573736564436F6C6F72070863
           6C615768697465000000}
       end>
-    Left = 612
-    Top = 544
+    Left = 8
+    Top = 8
   end
   object ToolbarHolder: TLayout
     OnGesture = FormGesture
     Align = Bottom
     Locked = True
-    Position.X = -560.000000000000000000
-    Position.Y = 525.000000000000000000
-    Size.Width = 1200.000000000000000000
-    Size.Height = 70.000000000000000000
+    Position.Y = 520.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 75.000000000000000000
     Size.PlatformDefault = False
     Visible = False
-    TabOrder = 2
     object ToolbarPopup: TPopup
       Touch.InteractiveGestures = [Pan]
       OnGesture = FormGesture
@@ -11937,17 +11708,27 @@ object UserPageForm: TUserPageForm
       PlacementRectangle.Top = -1.000000000000000000
       PlacementRectangle.Right = -1.000000000000000000
       PlacementRectangle.Bottom = -1.000000000000000000
-      Size.Width = 935.000000000000000000
-      Size.Height = 70.000000000000000000
+      Size.Width = 640.000000000000000000
+      Size.Height = 75.000000000000000000
       Size.PlatformDefault = False
+      object ToolbarPopupAnimation: TFloatAnimation
+        AnimationType = Out
+        Duration = 0.200000002980232200
+        Interpolation = Cubic
+        PropertyName = 'Position.Y'
+        StartValue = 0.000000000000000000
+        StopValue = 0.000000000000000000
+        Trigger = 'IsOpen=true'
+        TriggerInverse = 'IsOpen=false'
+      end
       object ToolBar1: TToolBar
         StyleName = 'StyleBook1'
         Align = Client
         Padding.Left = 50.000000000000000000
         Padding.Top = 5.000000000000000000
         Padding.Right = 50.000000000000000000
-        Size.Width = 935.000000000000000000
-        Size.Height = 70.000000000000000000
+        Size.Width = 640.000000000000000000
+        Size.Height = 75.000000000000000000
         Size.PlatformDefault = False
         object ToolbarApplyButton: TButton
           Align = Left
@@ -11969,13 +11750,14 @@ object UserPageForm: TUserPageForm
           Margins.Top = 5.000000000000000000
           Margins.Right = 5.000000000000000000
           Margins.Bottom = 5.000000000000000000
-          Position.X = 800.000000000000000000
+          Position.X = 505.000000000000000000
           Position.Y = 10.000000000000000000
           Size.Width = 80.000000000000000000
           Size.Height = 68.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = 'closebuttontext'
-          Text = 'Close'
+          Text = 'Close App'
+          OnClick = ToolbarCloseButtonClick
         end
         object ToolbarAddButton: TButton
           Align = Left
@@ -11991,16 +11773,6 @@ object UserPageForm: TUserPageForm
           StyleLookup = 'addbuttontext'
           Text = 'Add'
         end
-      end
-      object ToolbarPopupAnimation: TFloatAnimation
-        AnimationType = Out
-        Duration = 0.200000002980232200
-        Interpolation = Cubic
-        PropertyName = 'Position.Y'
-        StartValue = 0.000000000000000000
-        StopValue = 0.000000000000000000
-        Trigger = 'IsOpen=true'
-        TriggerInverse = 'IsOpen=false'
       end
     end
   end
