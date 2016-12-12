@@ -1,4 +1,4 @@
-unit Login_Page;
+unit LoginPage;
 
 interface
 
@@ -11,7 +11,7 @@ uses
 
 type
   TLoginPageForm = class(TForm)
-    StyleBook2: TStyleBook;
+    LoginPageStyle: TStyleBook;
     ToolbarHolder: TLayout;
     ToolbarPopup: TPopup;
     ToolBar1: TToolBar;
