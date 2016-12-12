@@ -1,7 +1,7 @@
-unit Referance_Process_Page;
+unit ProcessObject;
 
 interface
- //This will be transferred !
+
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Layouts,
@@ -10,11 +10,12 @@ uses
   FMX.Ani, FMX.Gestures, FMX.StdCtrls, FMX.Controls.Presentation;
 
 type
-  TReferanceProcessForm = class(TForm)
-    StyleBook2: TStyleBook;
+  TProcessObjectForm = class(TForm)
     MainLayout: TLayout;
     HeaderLayout: TLayout;
     TitleLabel1: TLabel;
+    Layout2: TLayout;
+    HeaderButton: TButton;
     HorzScrollBox1: THorzScrollBox;
     Column1: TLayout;
     ArticleHeaderLayout: TLayout;
@@ -28,8 +29,7 @@ type
     Label3: TLabel;
     Column3: TLayout;
     Label4: TLabel;
-    Layout2: TLayout;
-    HeaderButton: TButton;
+    ProcessObject: TStyleBook;
     ToolbarHolder: TLayout;
     ToolbarPopup: TPopup;
     ToolBar1: TToolBar;
@@ -37,15 +37,12 @@ type
     ToolbarCloseButton: TButton;
     ToolbarAddButton: TButton;
     ToolbarPopupAnimation: TFloatAnimation;
-    //This will be transferred !
     procedure HeaderButtonClick(Sender: TObject);
-      //This will be transferred !
+
     procedure FormMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Single);
-      //This will be transferred !
     procedure FormGesture(Sender: TObject; const EventInfo: TGestureEventInfo;
       var Handled: Boolean);
-      //This will be transferred !
     procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
   private
@@ -53,26 +50,31 @@ type
     FGestureInProgress: Boolean;
     { Private declarations }
     procedure ShowToolbar(AShow: Boolean);
-    { Private declarations }
   public
     { Public declarations }
   end;
 
 var
-  ReferanceProcessForm: TReferanceProcessForm;
+  ProcessObjectForm: TProcessObjectForm;
 
 implementation
 
 {$R *.fmx}
-
-
-//This will be transferred !
-procedure TReferanceProcessForm.HeaderButtonClick(Sender: TObject);
+procedure TProcessObjectForm.HeaderButtonClick(Sender: TObject);
 begin
   Close;
 end;
 
-procedure TReferanceProcessForm.FormGesture(Sender: TObject;
+procedure TProcessObjectForm.FormKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
+begin
+   if Key = vkEscape then
+    Close;
+end;
+
+
+
+procedure TProcessObjectForm.FormGesture(Sender: TObject;
   const EventInfo: TGestureEventInfo; var Handled: Boolean);
 var
   DX, DY : Single;
@@ -97,15 +99,9 @@ begin
     end;
   end
 end;
-//This will be transferred !
-procedure TReferanceProcessForm.FormKeyDown(Sender: TObject; var Key: Word;
-  var KeyChar: Char; Shift: TShiftState);
-begin
-  if Key = vkEscape then
-    Close;
-end;
-//This will be transferred !
-procedure TReferanceProcessForm.FormMouseUp(Sender: TObject; Button: TMouseButton;
+
+
+procedure TProcessObjectForm.FormMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Single);
 begin
   if Button = TMouseButton.mbRight then
@@ -113,8 +109,7 @@ begin
   else
     ShowToolbar(False);
 end;
- //This will be transferred !
-procedure TReferanceProcessForm.ShowToolbar(AShow: Boolean);
+procedure TProcessObjectForm.ShowToolbar(AShow: Boolean);
 begin
   ToolbarPopup.Width := ClientWidth;
   ToolbarPopup.PlacementRectangle.Rect := TRectF.Create(0, ClientHeight-ToolbarPopup.Height, ClientWidth-1, ClientHeight-1);
