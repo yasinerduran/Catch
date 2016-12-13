@@ -40,6 +40,7 @@ type
     Button1: TButton;
     Brush1: TBrushObject;
     Layout13: TLayout;
+    Label3: TLabel;
 
     procedure FormMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Single);
@@ -49,6 +50,7 @@ type
     procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
     procedure ItemClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     FGestureOrigin: TPointF;
     FGestureInProgress: Boolean;
@@ -77,6 +79,15 @@ var
   Form: TCommonCustomForm;
 begin
   Form := Application.GetDeviceForm('DetailView');
+  if Assigned(Form) then
+    Form.Show;
+end;
+
+procedure TLoginPageForm.Button1Click(Sender: TObject);
+var
+  Form: TCommonCustomForm;
+begin
+  Form := Application.GetDeviceForm('FrontPage');
   if Assigned(Form) then
     Form.Show;
 end;

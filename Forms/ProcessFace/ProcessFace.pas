@@ -7,7 +7,8 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Layouts,
   FMX.Objects, FMX.ListBox,
   FMX.Menus, FMX.Media,
-  FMX.Ani, FMX.Gestures, FMX.StdCtrls, FMX.Controls.Presentation;
+  FMX.Ani, FMX.Gestures, FMX.StdCtrls, FMX.Controls.Presentation, FMX.ScrollBox,
+  FMX.Memo, FMX.Edit;
 
 type
   TProcessFaceForm = class(TForm)
@@ -19,14 +20,10 @@ type
     HorzScrollBox1: THorzScrollBox;
     Column1: TLayout;
     ArticleHeaderLayout: TLayout;
-    Illustration1: TImageControl;
     Layout4: TLayout;
     ItemTitle: TLabel;
     ItemSubTitle: TLabel;
-    Label1: TLabel;
     Column2: TLayout;
-    Label2: TLabel;
-    Label3: TLabel;
     Column3: TLayout;
     Label4: TLabel;
     ProcessFaceStyle: TStyleBook;
@@ -37,6 +34,28 @@ type
     ToolbarCloseButton: TButton;
     ToolbarAddButton: TButton;
     ToolbarPopupAnimation: TFloatAnimation;
+    HorzScrollBox2: THorzScrollBox;
+    Layout1: TLayout;
+    ListBox1: TListBox;
+    MetroListBoxItem6: TMetropolisUIListBoxItem;
+    MetroListBoxItem1: TMetropolisUIListBoxItem;
+    MetroListBoxItem2: TMetropolisUIListBoxItem;
+    Layout3: TLayout;
+    Layout8: TLayout;
+    Label1: TLabel;
+    Label2: TLabel;
+    Layout9: TLayout;
+    Label6: TLabel;
+    Edit1: TEdit;
+    Layout10: TLayout;
+    Label7: TLabel;
+    Memo1: TMemo;
+    Layout5: TLayout;
+    Layout6: TLayout;
+    Illustration1: TImageControl;
+    Layout7: TLayout;
+    Label3: TLabel;
+    Label5: TLabel;
 
     procedure HeaderButtonClick(Sender: TObject);
 

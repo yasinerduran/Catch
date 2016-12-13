@@ -23,7 +23,7 @@ begin
   Application.RegisterFormFamily('DetailView', [TReferanceProcessForm]);
   Application.RegisterFormFamily('ProcessObject', [TProcessObjectForm]);
   Application.RegisterFormFamily('FrontPage', [TFrontPageForm]);
-  Application.RegisterFormFamily('ProcessForm', [TProcessFaceForm]);
   Application.RegisterFormFamily('CreatedProcess', [TCreatedProcessForm]);
+  Application.RegisterFormFamily('ProcessFace', [TProcessFaceForm]);
   Application.Run;
 end.

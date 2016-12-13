@@ -2,8 +2,8 @@ object CreatedProcessForm: TCreatedProcessForm
   Left = 0
   Top = 0
   Caption = 'BlankForm'
-  ClientHeight = 595
-  ClientWidth = 640
+  ClientHeight = 749
+  ClientWidth = 1680
   StyleBook = CreatedProcessStyle
   FormFactor.Width = 1280
   FormFactor.Height = 1024
@@ -15,8 +15,8 @@ object CreatedProcessForm: TCreatedProcessForm
   object MainLayout: TLayout
     Align = Contents
     Margins.Top = 25.000000000000000000
-    Size.Width = 640.000000000000000000
-    Size.Height = 570.000000000000000000
+    Size.Width = 1680.000000000000000000
+    Size.Height = 724.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object HeaderLayout: TLayout
@@ -26,7 +26,7 @@ object CreatedProcessForm: TCreatedProcessForm
       Margins.Bottom = 10.000000000000000000
       Position.X = 110.000000000000000000
       Position.Y = 10.000000000000000000
-      Size.Width = 530.000000000000000000
+      Size.Width = 1570.000000000000000000
       Size.Height = 64.000000000000000000
       Size.PlatformDefault = False
       object TitleLabel1: TLabel
@@ -38,7 +38,7 @@ object CreatedProcessForm: TCreatedProcessForm
         StyleLookup = 'pageheaderlabel'
         TextSettings.Font.Size = 42.000000000000000000
         TextSettings.FontColor = claNull
-        Text = 'Group Title'
+        Text = 'X '#304#351'i(Veri Taban'#305')'
         object Layout2: TLayout
           Position.X = -75.000000000000000000
           Size.Width = 50.000000000000000000
@@ -60,54 +60,45 @@ object CreatedProcessForm: TCreatedProcessForm
     end
     object HorzScrollBox1: THorzScrollBox
       Align = Client
-      Size.Width = 640.000000000000000000
-      Size.Height = 486.000000000000000000
+      Size.Width = 1680.000000000000000000
+      Size.Height = 640.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'scrollboxstyle'
-      Viewport.Width = 640.000000000000000000
-      Viewport.Height = 470.000000000000000000
+      Viewport.Width = 1680.000000000000000000
+      Viewport.Height = 624.000000000000000000
       object Column1: TLayout
         Align = Left
         Anchors = [akLeft, akTop]
         Margins.Left = 120.000000000000000000
         Margins.Right = 30.000000000000000000
         Position.X = 120.000000000000000000
-        Size.Width = 500.000000000000000000
-        Size.Height = 470.000000000000000000
+        Size.Width = 681.000000000000000000
+        Size.Height = 624.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object ArticleHeaderLayout: TLayout
-          Align = Top
+          Align = Client
           Margins.Bottom = 10.000000000000000000
-          Size.Width = 500.000000000000000000
-          Size.Height = 321.000000000000000000
+          Size.Width = 681.000000000000000000
+          Size.Height = 614.000000000000000000
           Size.PlatformDefault = False
-          object Illustration1: TImageControl
-            Align = MostBottom
-            Margins.Top = 10.000000000000000000
-            Margins.Bottom = 10.000000000000000000
-            Position.Y = 96.000000000000000000
-            Size.Width = 500.000000000000000000
-            Size.Height = 215.000000000000000000
-            Size.PlatformDefault = False
-          end
           object Layout4: TLayout
-            Align = Client
-            Size.Width = 500.000000000000000000
-            Size.Height = 86.000000000000000000
+            Align = Top
+            Size.Width = 681.000000000000000000
+            Size.Height = 73.000000000000000000
             Size.PlatformDefault = False
             object ItemTitle: TLabel
               Align = Top
               Margins.Top = 5.000000000000000000
               Margins.Bottom = 10.000000000000000000
               Position.Y = 5.000000000000000000
-              Size.Width = 500.000000000000000000
+              Size.Width = 681.000000000000000000
               Size.Height = 28.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'pagesubheaderlabel'
               TextSettings.Font.Size = 20.000000000000000000
               TextSettings.FontColor = claNull
-              Text = 'Item Title'
+              Text = 'Camera '#304'smi '
             end
             object ItemSubTitle: TLabel
               Align = Top
@@ -115,42 +106,25 @@ object CreatedProcessForm: TCreatedProcessForm
               Margins.Left = 2.500000000000000000
               Position.X = 2.500000000000000000
               Position.Y = 43.000000000000000000
-              Size.Width = 497.500000000000000000
+              Size.Width = 678.500000000000000000
               Size.Height = 24.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'pagesubheaderlabel'
               TextSettings.Font.Size = 14.000000000000000000
               TextSettings.FontColor = claNull
-              Text = 'Item Subtitle'
+              Text = 'FPS : 000'
             end
           end
-        end
-        object Label1: TLabel
-          Align = Top
-          Position.Y = 331.000000000000000000
-          Size.Width = 500.000000000000000000
-          Size.Height = 349.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.FontColor = claNull
-          TextSettings.VertAlign = Leading
-          Text = 
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabit' +
-            'ur aliquet hendrerit ultricies. Quisque pharetra, sapien posuere' +
-            ' rhoncus elementum, sapien enim luctus ligula, ac lobortis liber' +
-            'o elit id eros. Integer urna mi, imperdiet ac viverra at, fermen' +
-            'tum eu justo. Morbi congue elementum arcu nec accumsan. Vestibul' +
-            'um ante ipsum primis in faucibus orci luctus et ultrices posuere' +
-            ' cubilia Curae; Duis non nulla velit, ac tincidunt arcu. Fusce i' +
-            'n mauris orci, nec sodales dui. Etiam pulvinar nulla id mi aliqu' +
-            'et at vestibulum dolor placerat. Suspendisse potenti. Mauris non' +
-            ' est at nisi pulvinar feugiat. Vivamus pellentesque, sem sit ame' +
-            't pulvinar placerat, erat justo dapibus quam, sit amet placerat ' +
-            'risus ipsum elementum nisi. Vestibulum auctor posuere ligula ut ' +
-            'hendrerit. Suspendisse luctus tortor in lacus tristique a sodale' +
-            's ipsum imperdiet. Nunc suscipit iaculis erat eu sodales. Mauris' +
-            ' imperdiet dapibus justo, a euismod augue pretium at. Quisque di' +
-            'am neque, fringilla at blandit vestibulum, ullamcorper quis augu' +
-            'e. '
+          object ImageViewer1: TImageViewer
+            Align = Client
+            Size.Width = 681.000000000000000000
+            Size.Height = 541.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            BitmapScale = 1.359999656677246000
+            Viewport.Width = 677.000000000000000000
+            Viewport.Height = 537.000000000000000000
+          end
         end
       end
       object Column2: TLayout
@@ -158,61 +132,376 @@ object CreatedProcessForm: TCreatedProcessForm
         Anchors = [akLeft, akTop]
         Margins.Left = 30.000000000000000000
         Margins.Right = 30.000000000000000000
-        Position.X = 680.000000000000000000
-        Size.Width = 500.000000000000000000
-        Size.Height = 470.000000000000000000
+        Position.X = 861.000000000000000000
+        Size.Width = 588.000000000000000000
+        Size.Height = 624.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
-        object Label2: TLabel
-          Align = Top
-          Size.Width = 500.000000000000000000
-          Size.Height = 265.000000000000000000
+        object Layout1: TLayout
+          Align = MostTop
+          Size.Width = 588.000000000000000000
+          Size.Height = 72.000000000000000000
           Size.PlatformDefault = False
-          TextSettings.FontColor = claNull
-          TextSettings.VertAlign = Leading
-          Text = 
-            'Sed feugiat, ligula non gravida bibendum, massa mi egestas turpi' +
-            's, non tempor nisl tortor a ante. Integer consequat nulla a maur' +
-            'is ornare eget iaculis elit luctus. Aenean vehicula mauris a nis' +
-            'i tempus ut rutrum massa pretium. Ut at molestie sapien. Cum soc' +
-            'iis natoque penatibus et magnis dis parturient montes, nascetur ' +
-            'ridiculus mus. Sed rutrum, sapien vitae sodales ultrices, dui ma' +
-            'uris laoreet justo, vel vehicula nibh orci vitae ante. Mauris ac' +
-            ' dolor mauris. Nunc consectetur pellentesque luctus. In bibendum' +
-            ', lectus sit amet adipiscing fringilla, risus sem pharetra ante,' +
-            ' ultricies sagittis leo neque non felis. Quisque vehicula, velit' +
-            ' eget sagittis feugiat, ligula nunc sagittis est, sed placerat t' +
-            'ellus nibh vitae sem. Nullam ut rutrum risus. '
+          TabOrder = 0
+          object Label1: TLabel
+            Align = Left
+            Position.X = 153.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 72.000000000000000000
+            Size.PlatformDefault = False
+            Text = '   Nesne Listesi '
+          end
+          object Button1: TButton
+            Align = Right
+            Position.X = 432.000000000000000000
+            Position.Y = 16.000000000000000000
+            Size.Width = 40.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'gearbutton'
+            TabOrder = 1
+            Text = 'Button1'
+            OnClick = Button1Click
+          end
+          object Label2: TLabel
+            Align = Right
+            Position.X = 368.000000000000000000
+            Size.Width = 64.000000000000000000
+            Size.Height = 72.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Ayarlar'
+          end
+          object Button2: TButton
+            Align = Left
+            Position.X = 113.000000000000000000
+            Position.Y = 16.000000000000000000
+            Size.Width = 40.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'homebutton'
+            TabOrder = 3
+            Text = 'Button2'
+            OnClick = Button2Click
+          end
+          object Panel1: TPanel
+            Align = Center
+            Size.Width = 3.000000000000000000
+            Size.Height = 49.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 4
+          end
+          object Layout3: TLayout
+            Align = Left
+            Size.Width = 113.000000000000000000
+            Size.Height = 72.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+          end
+          object Layout5: TLayout
+            Align = Right
+            Position.X = 472.000000000000000000
+            Size.Width = 116.000000000000000000
+            Size.Height = 72.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 6
+          end
         end
-        object Label3: TLabel
-          Align = Top
-          Position.Y = 265.000000000000000000
-          Size.Width = 500.000000000000000000
-          Size.Height = 248.000000000000000000
+        object TabControl1: TTabControl
+          Align = Client
+          Size.Width = 588.000000000000000000
+          Size.Height = 552.000000000000000000
           Size.PlatformDefault = False
-          TextSettings.FontColor = claNull
-          TextSettings.VertAlign = Leading
-          Text = 
-            'Donec quis leo ipsum, vel placerat augue. Suspendisse quam purus' +
-            ', tempus et lobortis et, dignissim ac neque. Etiam ligula nisi, ' +
-            'fringilla eget varius vel, varius a nunc. Sed mauris nisl, conva' +
-            'llis id accumsan venenatis, mollis sit amet sem. Sed convallis f' +
-            'aucibus lectus, vitae fringilla orci condimentum a. Vivamus a co' +
-            'ngue quam. Curabitur convallis ante eu turpis accumsan iaculis. ' +
-            'Vivamus laoreet dapibus ultricies. Curabitur egestas euismod nun' +
-            'c, ac hendrerit elit suscipit id. Proin eros dui, dapibus eget f' +
-            'aucibus eget, molestie eu enim. Sed ultrices dignissim placerat.' +
-            ' Vivamus consequat venenatis ligula a vulputate. Phasellus elit ' +
-            'orci, ullamcorper id aliquam quis, fringilla nec diam. '
+          TabIndex = 0
+          TabOrder = 1
+          TabPosition = Dots
+          Sizes = (
+            588s
+            552s
+            588s
+            552s)
+          object TabItem1: TTabItem
+            CustomIcon = <
+              item
+              end>
+            IsSelected = True
+            Size.Width = 8.000000000000000000
+            Size.Height = 8.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = 'TabItem1'
+            object Layout6: TLayout
+              Align = Client
+              Size.Width = 588.000000000000000000
+              Size.Height = 552.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object LeftLayout: TLayout
+                Align = Left
+                Size.Width = 577.000000000000000000
+                Size.Height = 552.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object ListBoxItems: TListBox
+                  Align = Client
+                  Margins.Left = 20.000000000000000000
+                  Margins.Top = 10.000000000000000000
+                  Size.Width = 557.000000000000000000
+                  Size.Height = 468.000000000000000000
+                  Size.PlatformDefault = False
+                  StyleLookup = 'collectionlistbox'
+                  DisableFocusEffect = True
+                  ItemHeight = 110.000000000000000000
+                  DefaultItemStyles.ItemStyle = ''
+                  DefaultItemStyles.GroupHeaderStyle = ''
+                  DefaultItemStyles.GroupFooterStyle = ''
+                  Viewport.Width = 537.000000000000000000
+                  Viewport.Height = 464.000000000000000000
+                  object ArticleHeader1: TMetropolisUIListBoxItem
+                    ClipChildren = True
+                    Margins.Top = 10.000000000000000000
+                    Margins.Bottom = 10.000000000000000000
+                    Size.Width = 537.000000000000000000
+                    Size.Height = 110.000000000000000000
+                    Size.PlatformDefault = False
+                    StyleLookup = 'collectionlistboxitem'
+                    TabOrder = 0
+                    Title = 'Item Title 1'
+                    SubTitle = 'Item SubTitle'
+                    Description = 'Long description'
+                    Icon.PNG = {
+                      89504E470D0A1A0A0000000D49484452000001000000010008060000005C72A8
+                      66000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                      031F49444154785EEDD43101C0300CC0B074FC890555FB8C85A5C70C7C76F70E
+                      90F4FD05820C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                      00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                      00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                      00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                      00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                      00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                      00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                      00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00B266
+                      1E57ED055A283395290000000049454E44AE426082}
+                  end
+                  object ArticleHeader2: TMetropolisUIListBoxItem
+                    Tag = 1
+                    ClipChildren = True
+                    Margins.Top = 10.000000000000000000
+                    Margins.Bottom = 10.000000000000000000
+                    Size.Width = 537.000000000000000000
+                    Size.Height = 110.000000000000000000
+                    Size.PlatformDefault = False
+                    StyleLookup = 'collectionlistboxitem'
+                    TabOrder = 1
+                    Text = 'ArticleHeader2'
+                    Title = 'Item Title 2'
+                    SubTitle = 'Item SubTitle'
+                    Description = 'Long description'
+                    Icon.PNG = {
+                      89504E470D0A1A0A0000000D49484452000001000000010008060000005C72A8
+                      66000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                      031F49444154785EEDD43101C0300CC0B074FC9F206E9FB1B0F49881CFEEDE01
+                      92BEBF4090014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      9801409801409801409801409801409801409801409801409801409801409801
+                      4098014098014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      9801409801409801409801409801409801409801409801409801409801409801
+                      4098014098014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      9801409801409801409801409801409801409801409801409801409801409801
+                      4098014098014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      9801409801409801409801409801409801409801409801409801409801409801
+                      4098014098014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      9801409801409801409801409801409801409801409801409801409801409801
+                      4098014098014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      9801409801409801409801409801409801409801409801409801409801409801
+                      4098014098014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      9801409801409801409801409801409801409801409801409801409801409801
+                      4098014098014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      980140980140980140980140980140980140980140980140980140980140D6CC
+                      0389CE04B21B4E4DF10000000049454E44AE426082}
+                  end
+                  object ArticleHeader3: TMetropolisUIListBoxItem
+                    Tag = 2
+                    ClipChildren = True
+                    Margins.Top = 10.000000000000000000
+                    Margins.Bottom = 10.000000000000000000
+                    Size.Width = 537.000000000000000000
+                    Size.Height = 110.000000000000000000
+                    Size.PlatformDefault = False
+                    StyleLookup = 'collectionlistboxitem'
+                    TabOrder = 2
+                    Text = 'ArticleHeader3'
+                    Title = 'Item Title 3'
+                    SubTitle = 'Item SubTitle'
+                    Description = 'Long description'
+                    Icon.PNG = {
+                      89504E470D0A1A0A0000000D49484452000001000000010008060000005C72A8
+                      66000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                      031F49444154785EEDD43101C0300CC0B074FC9F206E9FB1B0F49881CFEEDE01
+                      92BEBF4090014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      9801409801409801409801409801409801409801409801409801409801409801
+                      4098014098014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      9801409801409801409801409801409801409801409801409801409801409801
+                      4098014098014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      9801409801409801409801409801409801409801409801409801409801409801
+                      4098014098014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      9801409801409801409801409801409801409801409801409801409801409801
+                      4098014098014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      9801409801409801409801409801409801409801409801409801409801409801
+                      4098014098014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      9801409801409801409801409801409801409801409801409801409801409801
+                      4098014098014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      9801409801409801409801409801409801409801409801409801409801409801
+                      4098014098014098014098014098014098014098014098014098014098014098
+                      0140980140980140980140980140980140980140980140980140980140980140
+                      980140980140980140980140980140980140980140980140980140980140D6CC
+                      0389CE04B21B4E4DF10000000049454E44AE426082}
+                  end
+                  object ArticleHeader4: TMetropolisUIListBoxItem
+                    Tag = 3
+                    ClipChildren = True
+                    Margins.Top = 10.000000000000000000
+                    Margins.Bottom = 10.000000000000000000
+                    Size.Width = 537.000000000000000000
+                    Size.Height = 110.000000000000000000
+                    Size.PlatformDefault = False
+                    StyleLookup = 'collectionlistboxitem'
+                    TabOrder = 3
+                    Text = 'ArticleHeader4'
+                    Title = 'Item Title 4'
+                    SubTitle = 'Item SubTitle'
+                    Description = 'Long description'
+                    Icon.PNG = {
+                      89504E470D0A1A0A0000000D49484452000001000000010008060000005C72A8
+                      66000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                      031F49444154785EEDD43101C0300CC0B074FC890555FB8C85A5C70C7C76F70E
+                      90F4FD05820C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                      00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                      00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                      00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                      00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                      00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                      00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                      00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                      0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                      C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00B266
+                      1E57ED055A283395290000000049454E44AE426082}
+                  end
+                end
+                object Layout8: TLayout
+                  Align = Top
+                  Margins.Left = 10.000000000000000000
+                  Margins.Top = 10.000000000000000000
+                  Position.X = 10.000000000000000000
+                  Position.Y = 10.000000000000000000
+                  Size.Width = 567.000000000000000000
+                  Size.Height = 64.000000000000000000
+                  Size.PlatformDefault = False
+                  object Label5: TLabel
+                    Align = Left
+                    Locked = True
+                    Size.Width = 567.000000000000000000
+                    Size.Height = 64.000000000000000000
+                    Size.PlatformDefault = False
+                    StyleLookup = 'pagesubheaderlabel'
+                    TextSettings.Font.Size = 42.000000000000000000
+                    TextSettings.FontColor = claNull
+                    Text = 'Yakalanan ( Nesneller - Y'#252'zler ) '
+                    object Layout9: TLayout
+                      Position.X = -75.000000000000000000
+                      Size.Width = 50.000000000000000000
+                      Size.Height = 64.000000000000000000
+                      Size.PlatformDefault = False
+                      object Button3: TButton
+                        Align = Center
+                        Size.Width = 40.000000000000000000
+                        Size.Height = 40.000000000000000000
+                        Size.PlatformDefault = False
+                        StyleLookup = 'backbutton'
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+          object TabItem2: TTabItem
+            CustomIcon = <
+              item
+              end>
+            IsSelected = False
+            Size.Width = 8.000000000000000000
+            Size.Height = 8.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = 'TabItem2'
+            object Layout7: TLayout
+              Align = Client
+              Size.Width = 588.000000000000000000
+              Size.Height = 552.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object Label3: TLabel
+                Position.X = 216.000000000000000000
+                Position.Y = 184.000000000000000000
+                Text = 'Ayarlar '
+              end
+            end
+          end
         end
       end
       object Column3: TLayout
         Align = Left
         Anchors = [akLeft, akTop]
         Margins.Left = 30.000000000000000000
-        Position.X = 1240.000000000000000000
+        Position.X = 1509.000000000000000000
         Size.Width = 500.000000000000000000
-        Size.Height = 470.000000000000000000
+        Size.Height = 624.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
         object Label4: TLabel
@@ -11948,20 +12237,6 @@ object CreatedProcessForm: TCreatedProcessForm
         Size.Width = 935.000000000000000000
         Size.Height = 70.000000000000000000
         Size.PlatformDefault = False
-        object ToolbarApplyButton: TButton
-          Align = Left
-          Margins.Left = 5.000000000000000000
-          Margins.Top = 5.000000000000000000
-          Margins.Right = 5.000000000000000000
-          Margins.Bottom = 5.000000000000000000
-          Position.X = 141.000000000000000000
-          Position.Y = 10.000000000000000000
-          Size.Width = 80.000000000000000000
-          Size.Height = 68.000000000000000000
-          Size.PlatformDefault = False
-          StyleLookup = 'applybuttontext'
-          Text = 'Apply'
-        end
         object ToolbarCloseButton: TButton
           Align = Right
           Margins.Left = 5.000000000000000000
@@ -11974,7 +12249,7 @@ object CreatedProcessForm: TCreatedProcessForm
           Size.Height = 68.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = 'closebuttontext'
-          Text = 'Close'
+          Text = 'Kapat '
           OnClick = ToolbarCloseButtonClick
         end
         object ToolbarAddButton: TButton
@@ -11984,11 +12259,12 @@ object CreatedProcessForm: TCreatedProcessForm
           Margins.Right = 5.000000000000000000
           Margins.Bottom = 5.000000000000000000
           Position.X = 55.000000000000000000
-          Position.Y = 10.000000000000000000
-          Size.Width = 76.000000000000000000
-          Size.Height = 68.000000000000000000
+          Position.Y = 18.000000000000000000
+          Size.Width = 40.000000000000000000
+          Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
-          StyleLookup = 'addbuttontext'
+          StyleLookup = 'contactsbutton'
+          TabOrder = 1
           Text = 'Add'
         end
       end

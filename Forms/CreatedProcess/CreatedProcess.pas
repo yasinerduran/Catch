@@ -7,7 +7,8 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Layouts,
   FMX.Objects, FMX.ListBox,
   FMX.Menus, FMX.Media,
-  FMX.Ani, FMX.Gestures, FMX.StdCtrls, FMX.Controls.Presentation;
+  FMX.Ani, FMX.Gestures, FMX.StdCtrls, FMX.Controls.Presentation, FMX.ExtCtrls,
+  FMX.TabControl;
 
 type
   TCreatedProcessForm = class(TForm)
@@ -19,24 +20,44 @@ type
     HorzScrollBox1: THorzScrollBox;
     Column1: TLayout;
     ArticleHeaderLayout: TLayout;
-    Illustration1: TImageControl;
     Layout4: TLayout;
     ItemTitle: TLabel;
     ItemSubTitle: TLabel;
-    Label1: TLabel;
     Column2: TLayout;
-    Label2: TLabel;
-    Label3: TLabel;
     Column3: TLayout;
     Label4: TLabel;
     CreatedProcessStyle: TStyleBook;
     ToolbarHolder: TLayout;
     ToolbarPopup: TPopup;
     ToolBar1: TToolBar;
-    ToolbarApplyButton: TButton;
     ToolbarCloseButton: TButton;
-    ToolbarAddButton: TButton;
     ToolbarPopupAnimation: TFloatAnimation;
+    ImageViewer1: TImageViewer;
+    Layout1: TLayout;
+    Label1: TLabel;
+    Button1: TButton;
+    Label2: TLabel;
+    Button2: TButton;
+    Panel1: TPanel;
+    Layout3: TLayout;
+    Layout5: TLayout;
+    TabControl1: TTabControl;
+    TabItem1: TTabItem;
+    TabItem2: TTabItem;
+    Layout6: TLayout;
+    Layout7: TLayout;
+    Label3: TLabel;
+    LeftLayout: TLayout;
+    ListBoxItems: TListBox;
+    ArticleHeader1: TMetropolisUIListBoxItem;
+    ArticleHeader2: TMetropolisUIListBoxItem;
+    ArticleHeader3: TMetropolisUIListBoxItem;
+    ArticleHeader4: TMetropolisUIListBoxItem;
+    Layout8: TLayout;
+    Label5: TLabel;
+    Layout9: TLayout;
+    Button3: TButton;
+    ToolbarAddButton: TButton;
 
     procedure HeaderButtonClick(Sender: TObject);
 
@@ -49,6 +70,8 @@ type
     procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
     procedure ToolbarCloseButtonClick(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
 
   private
     FGestureOrigin: TPointF;
@@ -71,6 +94,16 @@ begin
   Close;
 end;
 
+
+procedure TCreatedProcessForm.Button1Click(Sender: TObject);
+begin
+  TabControl1.Last();
+end;
+
+procedure TCreatedProcessForm.Button2Click(Sender: TObject);
+begin
+  TabControl1.First();
+end;
 
 procedure TCreatedProcessForm.FormGesture(Sender: TObject;
   const EventInfo: TGestureEventInfo; var Handled: Boolean);

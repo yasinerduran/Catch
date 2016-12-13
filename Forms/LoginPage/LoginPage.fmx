@@ -11851,6 +11851,7 @@ object LoginPageForm: TLoginPageForm
             StyleLookup = 'forwardbutton'
             TabOrder = 1
             Text = 'Button1'
+            OnClick = Button1Click
           end
         end
         object Layout9: TLayout
@@ -11927,6 +11928,15 @@ object LoginPageForm: TLoginPageForm
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 3
+          object Label3: TLabel
+            Align = Center
+            StyledSettings = [Family, Size, Style]
+            Size.Width = 220.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.FontColor = claDarkred
+            Text = 'Kullan'#305'c'#305' Ad'#305' Yada '#350'ifre Yanl'#305#351' !'
+          end
         end
       end
     end

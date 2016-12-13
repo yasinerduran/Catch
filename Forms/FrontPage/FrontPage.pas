@@ -13,12 +13,6 @@ type
   TFrontPageForm = class(TForm)
     MainLayout: TLayout;
    ToolbarHolder: TLayout;
-    ToolbarPopup: TPopup;
-    ToolBar1: TToolBar;
-    ToolbarApplyButton: TButton;
-    ToolbarCloseButton: TButton;
-    ToolbarAddButton: TButton;
-    ToolbarPopupAnimation: TFloatAnimation;
 
     HeaderLayout: TLayout;
     TitleLabel1: TLabel;
@@ -39,7 +33,19 @@ type
     MetroListBoxItem7: TMetropolisUIListBoxItem;
     MetroListBoxItem8: TMetropolisUIListBoxItem;
     MetroListBoxItem9: TMetropolisUIListBoxItem;
-    GroupTitle3: TLabel;
+    labelgt3: TLabel;
+    Layout1: TLayout;
+    ListBox4: TListBox;
+    MetropolisUIListBoxItem1: TMetropolisUIListBoxItem;
+    MetropolisUIListBoxItem2: TMetropolisUIListBoxItem;
+    Label1: TLabel;
+    ToolbarPopup: TPopup;
+    ToolBar1: TToolBar;
+    ToolbarApplyButton: TButton;
+    ToolbarCloseButton: TButton;
+    ToolbarPopupAnimation: TFloatAnimation;
+    Label3: TLabel;
+    Label4: TLabel;
    procedure FormMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Single);
     procedure FormGesture(Sender: TObject; const EventInfo: TGestureEventInfo;
@@ -47,7 +53,11 @@ type
     procedure ToolbarCloseButtonClick(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
-    procedure ItemClick(Sender: TObject);
+
+    procedure MetroListBoxItem3Click(Sender: TObject);
+    procedure MetropolisUIListBoxItem1Click(Sender: TObject);
+    procedure MetroListBoxItem6Click(Sender: TObject);
+    procedure ToolbarApplyButtonClick(Sender: TObject);
   private
     FGestureOrigin: TPointF;
     FGestureInProgress: Boolean;
@@ -62,18 +72,18 @@ var
 
 implementation
 uses Math;
-
-{$R *.fmx}
-
-procedure TFrontPageForm.ItemClick(Sender: TObject);
 var
   Form: TCommonCustomForm;
-begin
-  Form := Application.GetDeviceForm('DetailView');
-  if Assigned(Form) then
-    Form.Show;
-end;
+{$R *.fmx}
 
+
+
+procedure TFrontPageForm.ToolbarApplyButtonClick(Sender: TObject);
+begin
+Form := Application.GetDeviceForm('Main');
+  if Assigned(Form) then
+  Form.Show;
+end;
 
 procedure TFrontPageForm.ToolbarCloseButtonClick(Sender: TObject);
 begin
@@ -120,6 +130,26 @@ begin
     ShowToolbar(True)
   else
     ShowToolbar(False);
+end;
+
+procedure TFrontPageForm.MetroListBoxItem3Click(Sender: TObject);
+
+begin
+ {}
+end;
+
+procedure TFrontPageForm.MetroListBoxItem6Click(Sender: TObject);
+begin
+   Form := Application.GetDeviceForm('CreatedProcess');
+  if Assigned(Form) then
+  Form.Show;
+end;
+
+procedure TFrontPageForm.MetropolisUIListBoxItem1Click(Sender: TObject);
+begin
+   Form := Application.GetDeviceForm('ProcessFace');
+  if Assigned(Form) then
+  Form.Show;
 end;
 
 procedure TFrontPageForm.ShowToolbar(AShow: Boolean);

@@ -2,21 +2,21 @@ object ProcessFaceForm: TProcessFaceForm
   Left = 0
   Top = 0
   Caption = 'BlankForm'
-  ClientHeight = 595
-  ClientWidth = 640
+  ClientHeight = 765
+  ClientWidth = 1089
   StyleBook = ProcessFaceStyle
   FormFactor.Width = 1280
   FormFactor.Height = 1024
   FormFactor.Devices = [Desktop]
-  FormFamily = 'ProcessForm'
+  FormFamily = 'ProcessFace'
   FullScreen = True
   OnKeyDown = FormKeyDown
   DesignerMasterStyle = 0
   object MainLayout: TLayout
     Align = Contents
     Margins.Top = 25.000000000000000000
-    Size.Width = 640.000000000000000000
-    Size.Height = 570.000000000000000000
+    Size.Width = 1089.000000000000000000
+    Size.Height = 740.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object HeaderLayout: TLayout
@@ -26,7 +26,7 @@ object ProcessFaceForm: TProcessFaceForm
       Margins.Bottom = 10.000000000000000000
       Position.X = 110.000000000000000000
       Position.Y = 10.000000000000000000
-      Size.Width = 530.000000000000000000
+      Size.Width = 979.000000000000000000
       Size.Height = 64.000000000000000000
       Size.PlatformDefault = False
       object TitleLabel1: TLabel
@@ -38,7 +38,7 @@ object ProcessFaceForm: TProcessFaceForm
         StyleLookup = 'pageheaderlabel'
         TextSettings.Font.Size = 42.000000000000000000
         TextSettings.FontColor = claNull
-        Text = 'Group Title'
+        Text = 'Y'#252'z Takibi'
         object Layout2: TLayout
           Position.X = -75.000000000000000000
           Size.Width = 50.000000000000000000
@@ -60,54 +60,45 @@ object ProcessFaceForm: TProcessFaceForm
     end
     object HorzScrollBox1: THorzScrollBox
       Align = Client
-      Size.Width = 640.000000000000000000
-      Size.Height = 486.000000000000000000
+      Size.Width = 1089.000000000000000000
+      Size.Height = 656.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'scrollboxstyle'
-      Viewport.Width = 640.000000000000000000
-      Viewport.Height = 470.000000000000000000
+      Viewport.Width = 1089.000000000000000000
+      Viewport.Height = 640.000000000000000000
       object Column1: TLayout
         Align = Left
         Anchors = [akLeft, akTop]
         Margins.Left = 120.000000000000000000
         Margins.Right = 30.000000000000000000
         Position.X = 120.000000000000000000
-        Size.Width = 500.000000000000000000
-        Size.Height = 470.000000000000000000
+        Size.Width = 577.000000000000000000
+        Size.Height = 640.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object ArticleHeaderLayout: TLayout
           Align = Top
           Margins.Bottom = 10.000000000000000000
-          Size.Width = 500.000000000000000000
-          Size.Height = 321.000000000000000000
+          Size.Width = 577.000000000000000000
+          Size.Height = 81.000000000000000000
           Size.PlatformDefault = False
-          object Illustration1: TImageControl
-            Align = MostBottom
-            Margins.Top = 10.000000000000000000
-            Margins.Bottom = 10.000000000000000000
-            Position.Y = 96.000000000000000000
-            Size.Width = 500.000000000000000000
-            Size.Height = 215.000000000000000000
-            Size.PlatformDefault = False
-          end
           object Layout4: TLayout
-            Align = Client
-            Size.Width = 500.000000000000000000
-            Size.Height = 86.000000000000000000
+            Align = Top
+            Size.Width = 577.000000000000000000
+            Size.Height = 81.000000000000000000
             Size.PlatformDefault = False
             object ItemTitle: TLabel
               Align = Top
               Margins.Top = 5.000000000000000000
               Margins.Bottom = 10.000000000000000000
               Position.Y = 5.000000000000000000
-              Size.Width = 500.000000000000000000
+              Size.Width = 577.000000000000000000
               Size.Height = 28.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'pagesubheaderlabel'
               TextSettings.Font.Size = 20.000000000000000000
               TextSettings.FontColor = claNull
-              Text = 'Item Title'
+              Text = 'Kullan'#305'labilir Kameralar'
             end
             object ItemSubTitle: TLabel
               Align = Top
@@ -115,42 +106,185 @@ object ProcessFaceForm: TProcessFaceForm
               Margins.Left = 2.500000000000000000
               Position.X = 2.500000000000000000
               Position.Y = 43.000000000000000000
-              Size.Width = 497.500000000000000000
+              Size.Width = 574.500000000000000000
               Size.Height = 24.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'pagesubheaderlabel'
               TextSettings.Font.Size = 14.000000000000000000
               TextSettings.FontColor = claNull
-              Text = 'Item Subtitle'
+              Text = 'Sisteme bagl'#305' ve haz'#305'r durumdaki kameralar'
             end
           end
         end
-        object Label1: TLabel
-          Align = Top
-          Position.Y = 331.000000000000000000
-          Size.Width = 500.000000000000000000
-          Size.Height = 349.000000000000000000
+        object HorzScrollBox2: THorzScrollBox
+          Align = Client
+          Size.Width = 577.000000000000000000
+          Size.Height = 549.000000000000000000
           Size.PlatformDefault = False
-          TextSettings.FontColor = claNull
-          TextSettings.VertAlign = Leading
-          Text = 
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabit' +
-            'ur aliquet hendrerit ultricies. Quisque pharetra, sapien posuere' +
-            ' rhoncus elementum, sapien enim luctus ligula, ac lobortis liber' +
-            'o elit id eros. Integer urna mi, imperdiet ac viverra at, fermen' +
-            'tum eu justo. Morbi congue elementum arcu nec accumsan. Vestibul' +
-            'um ante ipsum primis in faucibus orci luctus et ultrices posuere' +
-            ' cubilia Curae; Duis non nulla velit, ac tincidunt arcu. Fusce i' +
-            'n mauris orci, nec sodales dui. Etiam pulvinar nulla id mi aliqu' +
-            'et at vestibulum dolor placerat. Suspendisse potenti. Mauris non' +
-            ' est at nisi pulvinar feugiat. Vivamus pellentesque, sem sit ame' +
-            't pulvinar placerat, erat justo dapibus quam, sit amet placerat ' +
-            'risus ipsum elementum nisi. Vestibulum auctor posuere ligula ut ' +
-            'hendrerit. Suspendisse luctus tortor in lacus tristique a sodale' +
-            's ipsum imperdiet. Nunc suscipit iaculis erat eu sodales. Mauris' +
-            ' imperdiet dapibus justo, a euismod augue pretium at. Quisque di' +
-            'am neque, fringilla at blandit vestibulum, ullamcorper quis augu' +
-            'e. '
+          TabOrder = 0
+          Viewport.Width = 577.000000000000000000
+          Viewport.Height = 549.000000000000000000
+          object Layout1: TLayout
+            Align = Client
+            Size.Width = 577.000000000000000000
+            Size.Height = 549.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object ListBox1: TListBox
+              Align = Client
+              Margins.Left = 10.000000000000000000
+              Size.Width = 567.000000000000000000
+              Size.Height = 549.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'transparentlistboxstyle'
+              TabOrder = 0
+              Columns = 2
+              DisableFocusEffect = True
+              ItemHeight = 250.000000000000000000
+              ItemWidth = 250.000000000000000000
+              DefaultItemStyles.ItemStyle = ''
+              DefaultItemStyles.GroupHeaderStyle = ''
+              DefaultItemStyles.GroupFooterStyle = ''
+              ListStyle = Horizontal
+              Viewport.Width = 567.000000000000000000
+              Viewport.Height = 549.000000000000000000
+              object MetroListBoxItem6: TMetropolisUIListBoxItem
+                ClipChildren = True
+                Margins.Left = 5.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 5.000000000000000000
+                Size.Width = 250.000000000000000000
+                Size.Height = 240.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'collectionlistboxitem'
+                TabOrder = 0
+                Text = 'MetroListBoxItem6'
+                Title = 'Ps3 EYE Cam'
+                SubTitle = 'Item SubTitle '
+                Description = ''
+                Icon.PNG = {
+                  89504E470D0A1A0A0000000D49484452000001000000010008060000005C72A8
+                  66000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                  031F49444154785EEDD43101C0300CC0B074FC9F206E9FB1B0F49881CFEEDE01
+                  92BEBF4090014098014098014098014098014098014098014098014098014098
+                  0140980140980140980140980140980140980140980140980140980140980140
+                  9801409801409801409801409801409801409801409801409801409801409801
+                  4098014098014098014098014098014098014098014098014098014098014098
+                  0140980140980140980140980140980140980140980140980140980140980140
+                  9801409801409801409801409801409801409801409801409801409801409801
+                  4098014098014098014098014098014098014098014098014098014098014098
+                  0140980140980140980140980140980140980140980140980140980140980140
+                  9801409801409801409801409801409801409801409801409801409801409801
+                  4098014098014098014098014098014098014098014098014098014098014098
+                  0140980140980140980140980140980140980140980140980140980140980140
+                  9801409801409801409801409801409801409801409801409801409801409801
+                  4098014098014098014098014098014098014098014098014098014098014098
+                  0140980140980140980140980140980140980140980140980140980140980140
+                  9801409801409801409801409801409801409801409801409801409801409801
+                  4098014098014098014098014098014098014098014098014098014098014098
+                  0140980140980140980140980140980140980140980140980140980140980140
+                  9801409801409801409801409801409801409801409801409801409801409801
+                  4098014098014098014098014098014098014098014098014098014098014098
+                  0140980140980140980140980140980140980140980140980140980140980140
+                  9801409801409801409801409801409801409801409801409801409801409801
+                  4098014098014098014098014098014098014098014098014098014098014098
+                  0140980140980140980140980140980140980140980140980140980140980140
+                  980140980140980140980140980140980140980140980140980140980140D6CC
+                  0389CE04B21B4E4DF10000000049454E44AE426082}
+              end
+              object MetroListBoxItem1: TMetropolisUIListBoxItem
+                ClipChildren = True
+                Margins.Left = 5.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 5.000000000000000000
+                Size.Width = 250.000000000000000000
+                Size.Height = 240.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'collectionlistboxitem'
+                TabOrder = 1
+                Text = 'MetroListBoxItem1'
+                Title = 'Toshiba HD CAM'
+                SubTitle = 'Item SubTitle'
+                Description = ''
+                Icon.PNG = {
+                  89504E470D0A1A0A0000000D49484452000001000000010008060000005C72A8
+                  66000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                  031F49444154785EEDD43101C0300CC0B074FC890555FB8C85A5C70C7C76F70E
+                  90F4FD05820C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                  00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                  00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                  00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                  00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                  00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                  00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                  00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00B266
+                  1E57ED055A283395290000000049454E44AE426082}
+              end
+              object MetroListBoxItem2: TMetropolisUIListBoxItem
+                ClipChildren = True
+                Margins.Left = 5.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 5.000000000000000000
+                Size.Width = 250.000000000000000000
+                Size.Height = 240.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'collectionlistboxitem'
+                TabOrder = 2
+                Text = 'MetroListBoxItem2'
+                Title = 'IP Cam 3'
+                SubTitle = 'Item SubTitle'
+                Description = ''
+                Icon.PNG = {
+                  89504E470D0A1A0A0000000D49484452000001000000010008060000005C72A8
+                  66000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                  031F49444154785EEDD43101C0300CC0B074FC890555FB8C85A5C70C7C76F70E
+                  90F4FD05820C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                  00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                  00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                  00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                  00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                  00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                  00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C
+                  00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C2
+                  0C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00
+                  C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00C20C00B266
+                  1E57ED055A283395290000000049454E44AE426082}
+              end
+            end
+          end
         end
       end
       object Column2: TLayout
@@ -158,61 +292,169 @@ object ProcessFaceForm: TProcessFaceForm
         Anchors = [akLeft, akTop]
         Margins.Left = 30.000000000000000000
         Margins.Right = 30.000000000000000000
-        Position.X = 680.000000000000000000
-        Size.Width = 500.000000000000000000
-        Size.Height = 470.000000000000000000
+        Position.X = 757.000000000000000000
+        Size.Width = 468.000000000000000000
+        Size.Height = 640.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
-        object Label2: TLabel
+        object Layout3: TLayout
           Align = Top
-          Size.Width = 500.000000000000000000
-          Size.Height = 265.000000000000000000
+          Size.Width = 468.000000000000000000
+          Size.Height = 256.000000000000000000
           Size.PlatformDefault = False
-          TextSettings.FontColor = claNull
-          TextSettings.VertAlign = Leading
-          Text = 
-            'Sed feugiat, ligula non gravida bibendum, massa mi egestas turpi' +
-            's, non tempor nisl tortor a ante. Integer consequat nulla a maur' +
-            'is ornare eget iaculis elit luctus. Aenean vehicula mauris a nis' +
-            'i tempus ut rutrum massa pretium. Ut at molestie sapien. Cum soc' +
-            'iis natoque penatibus et magnis dis parturient montes, nascetur ' +
-            'ridiculus mus. Sed rutrum, sapien vitae sodales ultrices, dui ma' +
-            'uris laoreet justo, vel vehicula nibh orci vitae ante. Mauris ac' +
-            ' dolor mauris. Nunc consectetur pellentesque luctus. In bibendum' +
-            ', lectus sit amet adipiscing fringilla, risus sem pharetra ante,' +
-            ' ultricies sagittis leo neque non felis. Quisque vehicula, velit' +
-            ' eget sagittis feugiat, ligula nunc sagittis est, sed placerat t' +
-            'ellus nibh vitae sem. Nullam ut rutrum risus. '
+          TabOrder = 1
+          object Layout8: TLayout
+            Align = Top
+            Size.Width = 468.000000000000000000
+            Size.Height = 81.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Label1: TLabel
+              Align = Top
+              Margins.Top = 5.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Position.Y = 5.000000000000000000
+              Size.Width = 468.000000000000000000
+              Size.Height = 28.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'pagesubheaderlabel'
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.FontColor = claNull
+              Text = #304#351' '#304'smi ve Tan'#305'm'#305' '
+            end
+            object Label2: TLabel
+              Align = Top
+              StyledSettings = [Family, Style, FontColor]
+              Margins.Left = 2.500000000000000000
+              Position.X = 2.500000000000000000
+              Position.Y = 43.000000000000000000
+              Size.Width = 465.500000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'pagesubheaderlabel'
+              TextSettings.Font.Size = 14.000000000000000000
+              TextSettings.FontColor = claNull
+              Text = #304#351'in Tan'#305'm'#305' , ismi ve a'#231#305'klamalar'
+            end
+          end
+          object Layout9: TLayout
+            Align = Top
+            Position.Y = 81.000000000000000000
+            Size.Width = 468.000000000000000000
+            Size.Height = 56.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            object Label6: TLabel
+              Align = Left
+              Size.Width = 65.000000000000000000
+              Size.Height = 56.000000000000000000
+              Size.PlatformDefault = False
+              Text = #304#351' '#304'smi : '
+            end
+            object Edit1: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Left
+              TabOrder = 1
+              Position.X = 65.000000000000000000
+              Position.Y = 12.000000000000000000
+              Size.Width = 376.000000000000000000
+              Size.Height = 32.000000000000000000
+              Size.PlatformDefault = False
+            end
+          end
+          object Layout10: TLayout
+            Align = Top
+            Position.Y = 137.000000000000000000
+            Size.Width = 468.000000000000000000
+            Size.Height = 88.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label7: TLabel
+              Align = Left
+              Size.Width = 89.000000000000000000
+              Size.Height = 88.000000000000000000
+              Size.PlatformDefault = False
+              Text = #304#351' Tan'#305'm'#305' : '
+            end
+            object Memo1: TMemo
+              Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+              DataDetectorTypes = []
+              Align = Center
+              Size.Width = 327.000000000000000000
+              Size.Height = 57.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              Viewport.Width = 323.000000000000000000
+              Viewport.Height = 53.000000000000000000
+            end
+          end
         end
-        object Label3: TLabel
+        object Layout5: TLayout
           Align = Top
-          Position.Y = 265.000000000000000000
-          Size.Width = 500.000000000000000000
-          Size.Height = 248.000000000000000000
+          Position.Y = 256.000000000000000000
+          Size.Width = 468.000000000000000000
+          Size.Height = 329.000000000000000000
           Size.PlatformDefault = False
-          TextSettings.FontColor = claNull
-          TextSettings.VertAlign = Leading
-          Text = 
-            'Donec quis leo ipsum, vel placerat augue. Suspendisse quam purus' +
-            ', tempus et lobortis et, dignissim ac neque. Etiam ligula nisi, ' +
-            'fringilla eget varius vel, varius a nunc. Sed mauris nisl, conva' +
-            'llis id accumsan venenatis, mollis sit amet sem. Sed convallis f' +
-            'aucibus lectus, vitae fringilla orci condimentum a. Vivamus a co' +
-            'ngue quam. Curabitur convallis ante eu turpis accumsan iaculis. ' +
-            'Vivamus laoreet dapibus ultricies. Curabitur egestas euismod nun' +
-            'c, ac hendrerit elit suscipit id. Proin eros dui, dapibus eget f' +
-            'aucibus eget, molestie eu enim. Sed ultrices dignissim placerat.' +
-            ' Vivamus consequat venenatis ligula a vulputate. Phasellus elit ' +
-            'orci, ullamcorper id aliquam quis, fringilla nec diam. '
+          TabOrder = 0
+          object Layout6: TLayout
+            Align = Top
+            Margins.Bottom = 10.000000000000000000
+            Size.Width = 468.000000000000000000
+            Size.Height = 321.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Illustration1: TImageControl
+              Align = MostBottom
+              Margins.Top = 10.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Position.Y = 96.000000000000000000
+              Size.Width = 468.000000000000000000
+              Size.Height = 215.000000000000000000
+              Size.PlatformDefault = False
+            end
+            object Layout7: TLayout
+              Align = Client
+              Size.Width = 468.000000000000000000
+              Size.Height = 86.000000000000000000
+              Size.PlatformDefault = False
+              object Label3: TLabel
+                Align = Top
+                Margins.Top = 5.000000000000000000
+                Margins.Bottom = 10.000000000000000000
+                Position.Y = 5.000000000000000000
+                Size.Width = 468.000000000000000000
+                Size.Height = 36.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'pagesubheaderlabel'
+                TextSettings.Font.Size = 20.000000000000000000
+                TextSettings.FontColor = claNull
+                Text = #304#351' Kapak Fotograf'#305' '
+              end
+              object Label5: TLabel
+                Align = Top
+                StyledSettings = [Family, Style, FontColor]
+                Margins.Left = 2.500000000000000000
+                Position.X = 2.500000000000000000
+                Position.Y = 51.000000000000000000
+                Size.Width = 465.500000000000000000
+                Size.Height = 24.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'pagesubheaderlabel'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claNull
+                Text = 'Alan'#305'n '#252'st'#252'ne t'#305'klayarak Se'#231'im Yapabilirsiniz '
+              end
+            end
+          end
         end
       end
       object Column3: TLayout
         Align = Left
         Anchors = [akLeft, akTop]
         Margins.Left = 30.000000000000000000
-        Position.X = 1240.000000000000000000
+        Position.X = 1285.000000000000000000
         Size.Width = 500.000000000000000000
-        Size.Height = 470.000000000000000000
+        Size.Height = 640.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
         object Label4: TLabel
@@ -11912,8 +12154,8 @@ object ProcessFaceForm: TProcessFaceForm
           6C436F6C6F720708636C61426C61636B0C50726573736564436F6C6F72070863
           6C615768697465000000}
       end>
-    Left = 612
-    Top = 544
+    Left = 620
+    Top = 536
   end
   object ToolbarHolder: TLayout
     OnGesture = FormGesture
