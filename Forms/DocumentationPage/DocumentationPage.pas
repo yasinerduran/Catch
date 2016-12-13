@@ -4,22 +4,48 @@ interface
 
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Ani, FMX.Layouts, FMX.Gestures,
-  FMX.StdCtrls, FMX.Controls.Presentation;
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Layouts,
+  FMX.Objects, FMX.ListBox,
+  FMX.Menus, FMX.Media,
+  FMX.Ani, FMX.Gestures, FMX.StdCtrls, FMX.Controls.Presentation;
 
 type
-  TForm1 = class(TForm)
-    StyleBook1: TStyleBook;
+  TDocumentationPageForm = class(TForm)
+    MainLayout: TLayout;
+    HeaderLayout: TLayout;
+    TitleLabel1: TLabel;
+    Layout2: TLayout;
+    HeaderButton: TButton;
+    HorzScrollBox1: THorzScrollBox;
+    Column1: TLayout;
+    ArticleHeaderLayout: TLayout;
+    Illustration1: TImageControl;
+    Layout4: TLayout;
+    ItemTitle: TLabel;
+    ItemSubTitle: TLabel;
+    Label1: TLabel;
+    Column2: TLayout;
+    Label2: TLabel;
+    Label3: TLabel;
+    Column3: TLayout;
+    Label4: TLabel;
+    DocPageStyle: TStyleBook;
     ToolbarHolder: TLayout;
     ToolbarPopup: TPopup;
-    ToolbarPopupAnimation: TFloatAnimation;
     ToolBar1: TToolBar;
     ToolbarApplyButton: TButton;
     ToolbarCloseButton: TButton;
     ToolbarAddButton: TButton;
-    procedure ToolbarCloseButtonClick(Sender: TObject);
-    procedure FormGesture(Sender: TObject;
-      const EventInfo: TGestureEventInfo; var Handled: Boolean);
+    ToolbarPopupAnimation: TFloatAnimation;
+    //This will be transferred !
+    procedure HeaderButtonClick(Sender: TObject);
+      //This will be transferred !
+    procedure FormMouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+      //This will be transferred !
+    procedure FormGesture(Sender: TObject; const EventInfo: TGestureEventInfo;
+      var Handled: Boolean);
+      //This will be transferred !
     procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
   private
@@ -32,25 +58,17 @@ type
   end;
 
 var
-  Form1: TForm1;
+  DocumentationPageForm: TDocumentationPageForm;
 
 implementation
 
 {$R *.fmx}
-
-procedure TForm1.FormKeyDown(Sender: TObject; var Key: Word;
-  var KeyChar: Char; Shift: TShiftState);
+procedure TDocumentationPageForm.HeaderButtonClick(Sender: TObject);
 begin
-  if Key = vkEscape then
-    ShowToolbar(not ToolbarPopup.IsOpen);
+  Close;
 end;
 
-procedure TForm1.ToolbarCloseButtonClick(Sender: TObject);
-begin
-  Application.Terminate;
-end;
-
-procedure TForm1.FormGesture(Sender: TObject;
+procedure TDocumentationPageForm.FormGesture(Sender: TObject;
   const EventInfo: TGestureEventInfo; var Handled: Boolean);
 var
   DX, DY : Single;
@@ -76,7 +94,24 @@ begin
   end
 end;
 
-procedure TForm1.ShowToolbar(AShow: Boolean);
+
+procedure TDocumentationPageForm.FormKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
+begin
+  if Key = vkEscape then
+    Close;
+end;
+
+procedure TDocumentationPageForm.FormMouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  if Button = TMouseButton.mbRight then
+    ShowToolbar(True)
+  else
+    ShowToolbar(False);
+end;
+
+procedure TDocumentationPageForm.ShowToolbar(AShow: Boolean);
 begin
   ToolbarPopup.Width := ClientWidth;
   ToolbarPopup.PlacementRectangle.Rect := TRectF.Create(0, ClientHeight-ToolbarPopup.Height, ClientWidth-1, ClientHeight-1);

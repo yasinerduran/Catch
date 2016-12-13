@@ -7,7 +7,7 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Layouts,
   FMX.Objects, FMX.ListBox,
   FMX.Menus, FMX.Media, FMX.Ani, FMX.Gestures, FMX.StdCtrls,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation, FMX.Edit, FMX.Graphics;
 
 type
   TLoginPageForm = class(TForm)
@@ -20,26 +20,26 @@ type
     ToolbarAddButton: TButton;
     ToolbarPopupAnimation: TFloatAnimation;
     MainLayout: TLayout;
-    HeaderLayout: TLayout;
-    TitleLabel1: TLabel;
-    HorzScrollBox1: THorzScrollBox;
-    GroupLayout1: TLayout;
-    ListBox1: TListBox;
-    MetroListBoxItem6: TMetropolisUIListBoxItem;
-    MetroListBoxItem1: TMetropolisUIListBoxItem;
-    MetroListBoxItem2: TMetropolisUIListBoxItem;
-    GroupTitle1: TLabel;
-    GroupLayout2: TLayout;
-    ListBox2: TListBox;
-    MetroListBoxItem3: TMetropolisUIListBoxItem;
-    MetroListBoxItem4: TMetropolisUIListBoxItem;
-    GroupTitle2: TLabel;
-    GroupLayout3: TLayout;
-    ListBox3: TListBox;
-    MetroListBoxItem7: TMetropolisUIListBoxItem;
-    MetroListBoxItem8: TMetropolisUIListBoxItem;
-    MetroListBoxItem9: TMetropolisUIListBoxItem;
-    GroupTitle3: TLabel;
+    Video: TLayout;
+    Layout1: TLayout;
+    Layout2: TLayout;
+    Layout3: TLayout;
+    Layout4: TLayout;
+    Layout5: TLayout;
+    Layout6: TLayout;
+    Layout7: TLayout;
+    Layout9: TLayout;
+    Layout8: TLayout;
+    Layout10: TLayout;
+    Layout12: TLayout;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Layout11: TLayout;
+    Button1: TButton;
+    Brush1: TBrushObject;
+    Layout13: TLayout;
 
     procedure FormMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Single);
