@@ -27,7 +27,6 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Column3: TLayout;
-    Label4: TLabel;
     Layout2: TLayout;
     HeaderButton: TButton;
     ToolbarHolder: TLayout;
@@ -37,6 +36,35 @@ type
     ToolbarCloseButton: TButton;
     ToolbarAddButton: TButton;
     ToolbarPopupAnimation: TFloatAnimation;
+    Layout1: TLayout;
+    Layout3: TLayout;
+    Label4: TLabel;
+    Layout5: TLayout;
+    Layout6: TLayout;
+    Label6: TLabel;
+    Layout7: TLayout;
+    Layout8: TLayout;
+    Layout10: TLayout;
+    Layout11: TLayout;
+    RadioButton4: TRadioButton;
+    RadioButton5: TRadioButton;
+    RadioButton6: TRadioButton;
+    Layout9: TLayout;
+    Layout13: TLayout;
+    Layout14: TLayout;
+    Layout16: TLayout;
+    RadioButton1: TRadioButton;
+    RadioButton2: TRadioButton;
+    RadioButton3: TRadioButton;
+    Layout17: TLayout;
+    Layout18: TLayout;
+    Layout19: TLayout;
+    Layout20: TLayout;
+    RadioButton7: TRadioButton;
+    RadioButton8: TRadioButton;
+    RadioButton9: TRadioButton;
+    Layout12: TLayout;
+    Button1: TButton;
     //This will be transferred !
     procedure HeaderButtonClick(Sender: TObject);
       //This will be transferred !

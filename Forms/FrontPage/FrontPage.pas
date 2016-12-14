@@ -71,7 +71,7 @@ var
   FrontPageForm: TFrontPageForm;
 
 implementation
-uses Math;
+uses Math ,LoginPage;
 var
   Form: TCommonCustomForm;
 {$R *.fmx}
