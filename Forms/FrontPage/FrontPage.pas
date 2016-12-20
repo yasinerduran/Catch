@@ -80,9 +80,11 @@ var
   FrontPageForm: TFrontPageForm;
 
 implementation
-uses Math ,LoginPage;
+uses Math ,LoginPage,OpenCV;
 var
   Form: TCommonCustomForm;
+// Camera kütüpanesi kullanýlýyor
+   Cameras : Camera;
 {$R *.fmx}
 //   Record Nesnesi oluþturuluyor
 ThreadVar
@@ -91,10 +93,10 @@ ThreadVar
 // Camera Açmak için gereken thread nesnesi
 function OpenCam(Parameter : Pointer) : Integer;
 begin
+  //ShowMessage(FloatToStr( Cameras.OpenCam(1)));
   Result := 0;
   msgPtr := Parameter;
-  ShowMessagePos('Thread '+IntToStr(msgPtr.thread)+' '+msgPtr.msg,
-                 200*msgPtr.thread, 100);
+  ShowMessagePos('Thread  '+FloatToStr( Cameras.OpenCam(1)),200*msgPtr.thread, 100);
   EndThread(0);
 end;
 //- OpenCam-//
@@ -121,9 +123,10 @@ var
 begin
 
   msg1.thread := 1; // thread id ...
-  msg1.msg    := 'Hello World';
+  msg1.msg    := 'deneme1';
   thread1 := BeginThread(nil,0,Addr(OpenCam),Addr(msg1),0,id1);
   CloseHandle(thread1); //  Çalýþtýrýlan thread Temizleniyor ...
+
 end;
  // -- //
 procedure TFrontPageForm.FormGesture(Sender: TObject;

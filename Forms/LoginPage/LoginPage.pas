@@ -7,7 +7,7 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Layouts,
   FMX.Objects, FMX.ListBox,
   FMX.Menus, FMX.Media, FMX.Ani, FMX.Gestures, FMX.StdCtrls,
-  FMX.Controls.Presentation, FMX.Edit, FMX.Graphics;
+  FMX.Controls.Presentation, FMX.Edit, FMX.Graphics ;
 
 type
   TLoginPageForm = class(TForm)
