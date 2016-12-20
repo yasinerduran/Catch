@@ -1,0 +1,21 @@
+﻿[Video]
+Coordinates=381,238,42,33
+Visible=True
+LayerNames=
+
+[MediaPlayer1]
+Coordinates=282,174,80,33
+
+[MediaPlayerControl1]
+Coordinates=220,146,116,33
+LayerNames=
+
+[]
+Coordinates=270,78,84,33
+LayerNames=
+
+[Module Settings]
+ModelLayerNames=
+ActiveLayerNames=
+EditingLayerName=
+
