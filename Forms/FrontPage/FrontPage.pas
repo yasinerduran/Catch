@@ -7,9 +7,15 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Layouts,
   FMX.Objects, FMX.ListBox,
   FMX.Menus, FMX.Media, FMX.Ani, FMX.Gestures, FMX.StdCtrls,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation,Windows;
 
 type
+  //THread Ýçin bir Class Oluþturuluyor
+  TMsgRecord = record
+    thread : Integer;
+    msg    : string[30];
+  end;
+  // -- //
   TFrontPageForm = class(TForm)
     MainLayout: TLayout;
    ToolbarHolder: TLayout;
@@ -46,6 +52,8 @@ type
     ToolbarPopupAnimation: TFloatAnimation;
     Label3: TLabel;
     Label4: TLabel;
+    Button1: TButton;
+    Button2: TButton;
    procedure FormMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Single);
     procedure FormGesture(Sender: TObject; const EventInfo: TGestureEventInfo;
@@ -58,6 +66,7 @@ type
     procedure MetropolisUIListBoxItem1Click(Sender: TObject);
     procedure MetroListBoxItem6Click(Sender: TObject);
     procedure ToolbarApplyButtonClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     FGestureOrigin: TPointF;
     FGestureInProgress: Boolean;
@@ -75,8 +84,20 @@ uses Math ,LoginPage;
 var
   Form: TCommonCustomForm;
 {$R *.fmx}
-
-
+//   Record Nesnesi oluþturuluyor
+ThreadVar
+  msgPtr : ^TMsgRecord;
+//  -- //
+// Camera Açmak için gereken thread nesnesi
+function OpenCam(Parameter : Pointer) : Integer;
+begin
+  Result := 0;
+  msgPtr := Parameter;
+  ShowMessagePos('Thread '+IntToStr(msgPtr.thread)+' '+msgPtr.msg,
+                 200*msgPtr.thread, 100);
+  EndThread(0);
+end;
+//- OpenCam-//
 
 procedure TFrontPageForm.ToolbarApplyButtonClick(Sender: TObject);
 begin
@@ -90,6 +111,21 @@ begin
   Application.Terminate;
 end;
 
+
+//Kamera açmak için gereken trig
+procedure TFrontPageForm.Button1Click(Sender: TObject);
+var
+  id1, id2 : LongWord;
+  thread1, thread2 : Integer;
+  msg1, msg2 : TMsgRecord;
+begin
+
+  msg1.thread := 1; // thread id ...
+  msg1.msg    := 'Hello World';
+  thread1 := BeginThread(nil,0,Addr(OpenCam),Addr(msg1),0,id1);
+  CloseHandle(thread1); //  Çalýþtýrýlan thread Temizleniyor ...
+end;
+ // -- //
 procedure TFrontPageForm.FormGesture(Sender: TObject;
   const EventInfo: TGestureEventInfo; var Handled: Boolean);
 var
