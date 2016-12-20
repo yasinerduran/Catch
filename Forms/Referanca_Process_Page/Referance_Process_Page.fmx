@@ -3,7 +3,7 @@ object ReferanceProcessForm: TReferanceProcessForm
   Top = 0
   Caption = 'Form2'
   ClientHeight = 1061
-  ClientWidth = 1200
+  ClientWidth = 1345
   StyleBook = StyleBook2
   FormFactor.Width = 1280
   FormFactor.Height = 1024
@@ -11694,7 +11694,7 @@ object ReferanceProcessForm: TReferanceProcessForm
   object MainLayout: TLayout
     Align = Contents
     Margins.Top = 25.000000000000000000
-    Size.Width = 1200.000000000000000000
+    Size.Width = 1345.000000000000000000
     Size.Height = 1036.000000000000000000
     Size.PlatformDefault = False
     object HeaderLayout: TLayout
@@ -11704,7 +11704,7 @@ object ReferanceProcessForm: TReferanceProcessForm
       Margins.Bottom = 10.000000000000000000
       Position.X = 110.000000000000000000
       Position.Y = 10.000000000000000000
-      Size.Width = 1090.000000000000000000
+      Size.Width = 1235.000000000000000000
       Size.Height = 64.000000000000000000
       Size.PlatformDefault = False
       object TitleLabel1: TLabel
@@ -11739,11 +11739,11 @@ object ReferanceProcessForm: TReferanceProcessForm
     end
     object HorzScrollBox1: THorzScrollBox
       Align = Client
-      Size.Width = 1200.000000000000000000
+      Size.Width = 1345.000000000000000000
       Size.Height = 952.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'scrollboxstyle'
-      Viewport.Width = 1200.000000000000000000
+      Viewport.Width = 1345.000000000000000000
       Viewport.Height = 936.000000000000000000
       object Column1: TLayout
         Align = Left
@@ -11894,24 +11894,249 @@ object ReferanceProcessForm: TReferanceProcessForm
         Size.Height = 936.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
-        object Label4: TLabel
+        object Layout1: TLayout
           Align = Top
           Size.Width = 500.000000000000000000
-          Size.Height = 217.000000000000000000
+          Size.Height = 289.000000000000000000
           Size.PlatformDefault = False
-          TextSettings.FontColor = claNull
-          TextSettings.VertAlign = Leading
-          Text = 
-            'Proin interdum sagittis leo, sit amet imperdiet nisl malesuada e' +
-            'get. Donec rutrum risus quis lacus dignissim ac lobortis felis p' +
-            'ulvinar. Fusce laoreet, erat ut congue hendrerit, dolor sem cond' +
-            'imentum mauris, vel pellentesque felis lacus ac ante. Donec quis' +
-            ' est quis enim sollicitudin elementum. Fusce vel tellus velit. D' +
-            'onec sagittis, metus auctor fringilla sagittis, diam est digniss' +
-            'im diam, at pharetra massa nisl et ipsum. Mauris interdum gravid' +
-            'a velit, sollicitudin scelerisque quam porta quis. Vestibulum el' +
-            'eifend, quam at luctus sollicitudin, magna neque aliquet sapien,' +
-            ' a posuere quam arcu sed nisi. Vestibulum in ipsum massa'
+          TabOrder = 0
+          object Layout3: TLayout
+            Align = Top
+            Size.Width = 500.000000000000000000
+            Size.Height = 65.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Label4: TLabel
+              Align = Right
+              StyledSettings = [Family, Size, Style]
+              Size.Width = 499.999938964843800000
+              Size.Height = 65.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.FontColor = claRed
+              Text = 
+                '                            Oturum A'#231'ma Desenini Yanl'#305#351' Giriniz ' +
+                '! '
+            end
+          end
+          object Layout5: TLayout
+            Align = Top
+            Position.Y = 65.000000000000000000
+            Size.Width = 500.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label6: TLabel
+              Align = Right
+              Size.Width = 500.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              Text = '                                  Oturum A'#231'ma Desenini Giriniz '
+            end
+          end
+          object Layout6: TLayout
+            Align = Top
+            Position.Y = 115.000000000000000000
+            Size.Width = 500.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            object Layout7: TLayout
+              Align = Top
+              Size.Width = 500.000000000000000000
+              Size.Height = 41.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 4
+              object Layout8: TLayout
+                Align = Right
+                Position.X = 264.000000000000000000
+                Size.Width = 39.000000000000000000
+                Size.Height = 41.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 3
+              end
+              object Layout10: TLayout
+                Align = Right
+                Position.X = 328.000000000000000000
+                Size.Width = 172.000000000000000000
+                Size.Height = 41.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 2
+              end
+              object Layout11: TLayout
+                Align = Right
+                Position.X = 200.000000000000000000
+                Size.Width = 39.000000000000000000
+                Size.Height = 41.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 4
+              end
+              object RadioButton4: TRadioButton
+                Align = Right
+                Position.X = 303.000000000000000000
+                Size.Width = 25.000000000000000000
+                Size.Height = 41.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 7
+                Text = 'RadioButton1'
+              end
+              object RadioButton5: TRadioButton
+                Align = Right
+                Position.X = 239.000000000000000000
+                Size.Width = 25.000000000000000000
+                Size.Height = 41.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 6
+                Text = 'RadioButton1'
+              end
+              object RadioButton6: TRadioButton
+                Align = Right
+                Position.X = 175.000000000000000000
+                Size.Width = 25.000000000000000000
+                Size.Height = 41.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 5
+                Text = 'RadioButton1'
+              end
+            end
+            object Layout9: TLayout
+              Align = Top
+              Position.Y = 81.000000000000000000
+              Size.Width = 500.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 3
+              object Layout13: TLayout
+                Align = Right
+                Position.X = 264.000000000000000000
+                Size.Width = 39.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 3
+              end
+              object Layout14: TLayout
+                Align = Right
+                Position.X = 328.000000000000000000
+                Size.Width = 172.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 2
+              end
+              object Layout16: TLayout
+                Align = Right
+                Position.X = 200.000000000000000000
+                Size.Width = 39.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 4
+              end
+              object RadioButton1: TRadioButton
+                Align = Right
+                Position.X = 303.000000000000000000
+                Size.Width = 25.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 7
+                Text = 'RadioButton1'
+              end
+              object RadioButton2: TRadioButton
+                Align = Right
+                Position.X = 239.000000000000000000
+                Size.Width = 25.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 6
+                Text = 'RadioButton1'
+              end
+              object RadioButton3: TRadioButton
+                Align = Right
+                Position.X = 175.000000000000000000
+                Size.Width = 25.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 5
+                Text = 'RadioButton1'
+              end
+            end
+            object Layout17: TLayout
+              Align = Top
+              Position.Y = 41.000000000000000000
+              Size.Width = 500.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              object Layout18: TLayout
+                Align = Right
+                Position.X = 264.000000000000000000
+                Size.Width = 39.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 3
+              end
+              object Layout19: TLayout
+                Align = Right
+                Position.X = 328.000000000000000000
+                Size.Width = 172.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 2
+              end
+              object Layout20: TLayout
+                Align = Right
+                Position.X = 200.000000000000000000
+                Size.Width = 39.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 4
+              end
+              object RadioButton7: TRadioButton
+                Align = Right
+                Position.X = 303.000000000000000000
+                Size.Width = 25.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 7
+                Text = 'RadioButton1'
+              end
+              object RadioButton8: TRadioButton
+                Align = Right
+                Position.X = 239.000000000000000000
+                Size.Width = 25.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 6
+                Text = 'RadioButton1'
+              end
+              object RadioButton9: TRadioButton
+                Align = Right
+                Position.X = 175.000000000000000000
+                Size.Width = 25.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 5
+                Text = 'RadioButton1'
+              end
+            end
+          end
+          object Layout12: TLayout
+            Align = Bottom
+            Position.Y = 239.000000000000000000
+            Size.Width = 500.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            object Button1: TButton
+              Align = Right
+              Margins.Right = 227.000000000000000000
+              Position.X = 233.000000000000000000
+              Position.Y = 5.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'closebutton'
+              TabOrder = 0
+              Text = 'Button1'
+            end
+          end
         end
       end
     end
