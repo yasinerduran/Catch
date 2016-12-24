@@ -116,7 +116,15 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 DLL/OpenCV/DLLProjectFiles/OpenCV/OpenCV.opensdf
+<<<<<<< HEAD
+=======
 DLL/OpenCV/DLLProjectFiles/OpenCV/OpenCV.sdf
 DLL/OpenCV/DLLProjectFiles/OpenCV/OpenCV.sdf
 DLL/OpenCV/DLLProjectFiles/OpenCV/OpenCV.sdf
 DLL/OpenCV/DLLProjectFiles/OpenCV/.vs/OpenCV/v14/.suo
+>>>>>>> refs/remotes/origin/Development
+*.sdf
+DLL/OpenCV/DLLProjectFiles/OpenCV/.vs/OpenCV/v14/.suo
+*.ipch
+DLL/OpenCV/DLLProjectFiles/OpenCV/.vs/OpenCV/v14/.suo
+*.suo

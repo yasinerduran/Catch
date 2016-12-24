@@ -1,7 +1,4 @@
-﻿[MetroListBoxItem2]
-Coordinates=116,392,122,36
-
-[ToolbarHolder]
+﻿[ToolbarHolder]
 Coordinates=10,392,96,36
 
 [MainLayout]
@@ -15,9 +12,6 @@ Coordinates=625,346,122,36
 
 [MetroListBoxItem9]
 Coordinates=493,346,122,36
-
-[MetroListBoxItem1]
-Coordinates=361,346,122,36
 
 [GroupTitle1]
 Coordinates=235,232,82,58
@@ -99,5 +93,5 @@ Coordinates=606,10,128,58
 Coordinates=415,232,95,36
 
 []
-Coordinates=711,133,91,36
+Coordinates=361,346,122,36
 

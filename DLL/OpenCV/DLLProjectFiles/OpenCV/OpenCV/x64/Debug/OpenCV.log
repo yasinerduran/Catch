@@ -1,0 +1,19 @@
+﻿Build started 22.12.2016 05:08:14.
+     1>Project "C:\Users\HenGen\Desktop\Delphi\Catch\DLL\OpenCV\DLLProjectFiles\OpenCV\OpenCV\OpenCV.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\HenGen\Desktop\opencv\build\include\opencv2 /IC:\Users\HenGen\Desktop\opencv\build\include\opencv /IC:\Users\HenGen\Desktop\opencv\build\include /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D "_WINDOWS" /D _USRDLL /D OPENCV_EXPORTS /D "_WINDLL" /D "_UNICODE" /D "UNICODE" /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"x64\Debug\OpenCV.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt OpenCV.cpp
+         OpenCV.cpp
+     1>c:\users\hengen\desktop\delphi\catch\dll\opencv\dllprojectfiles\opencv\opencv\opencv.cpp(16): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\hengen\desktop\delphi\catch\dll\opencv\dllprojectfiles\opencv\opencv\opencv.cpp(46): warning C4244: 'initializing': conversion from 'double' to 'size_t', possible loss of data
+     1>c:\users\hengen\desktop\delphi\catch\dll\opencv\dllprojectfiles\opencv\opencv\opencv.cpp(48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+     1>c:\users\hengen\desktop\delphi\catch\dll\opencv\dllprojectfiles\opencv\opencv\opencv.cpp(38): warning C4715: 'OpenCam': not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\HenGen\Desktop\Delphi\Catch\DLL\OpenCV\DLLProjectFiles\OpenCV\x64\Debug\OpenCV.dll" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\HenGen\Desktop\opencv\build\x64\vc14\lib opencv_world310d.lib opencv_world310.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\HenGen\Desktop\Delphi\Catch\DLL\OpenCV\DLLProjectFiles\OpenCV\x64\Debug\OpenCV.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\HenGen\Desktop\Delphi\Catch\DLL\OpenCV\DLLProjectFiles\OpenCV\x64\Debug\OpenCV.lib" /MACHINE:X64 /DLL x64\Debug\dllmain.obj
+         x64\Debug\OpenCV.obj
+         x64\Debug\stdafx.obj
+         OpenCV.vcxproj -> C:\Users\HenGen\Desktop\Delphi\Catch\DLL\OpenCV\DLLProjectFiles\OpenCV\x64\Debug\OpenCV.dll
+     1>Done Building Project "C:\Users\HenGen\Desktop\Delphi\Catch\DLL\OpenCV\DLLProjectFiles\OpenCV\OpenCV\OpenCV.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.07

@@ -7,7 +7,8 @@ uses
   ProcessObject in '..\Forms\ProcessObject\ProcessObject.pas' {ProcessObjectForm},
   FrontPage in '..\Forms\FrontPage\FrontPage.pas' {FrontPageForm},
   ProcessFace in '..\Forms\ProcessFace\ProcessFace.pas' {ProcessFaceForm},
-  CreatedProcess in '..\Forms\CreatedProcess\CreatedProcess.pas' {CreatedProcessForm};
+  CreatedProcess in '..\Forms\CreatedProcess\CreatedProcess.pas' {CreatedProcessForm},
+  OpenCV in '..\DLL\OpenCV\ControlUnit\OpenCV.pas';
 
 {$R *.res}
 
