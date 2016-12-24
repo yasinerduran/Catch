@@ -7,7 +7,7 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Layouts,
   FMX.Objects, FMX.ListBox,
   FMX.Menus, FMX.Media, FMX.Ani, FMX.Gestures, FMX.StdCtrls,
-  FMX.Controls.Presentation,Windows;
+  FMX.Controls.Presentation,Windows, FMX.Edit;
 
 type
   //THread Ýçin bir Class Oluþturuluyor
@@ -18,16 +18,13 @@ type
   // -- //
   TFrontPageForm = class(TForm)
     MainLayout: TLayout;
-   ToolbarHolder: TLayout;
-
+    ToolbarHolder: TLayout;
     HeaderLayout: TLayout;
     TitleLabel1: TLabel;
     HorzScrollBox1: THorzScrollBox;
     GroupLayout1: TLayout;
     ListBox1: TListBox;
     MetroListBoxItem6: TMetropolisUIListBoxItem;
-    MetroListBoxItem1: TMetropolisUIListBoxItem;
-    MetroListBoxItem2: TMetropolisUIListBoxItem;
     GroupTitle1: TLabel;
     GroupLayout2: TLayout;
     ListBox2: TListBox;
@@ -54,6 +51,10 @@ type
     Label4: TLabel;
     Button1: TButton;
     Button2: TButton;
+    Edit1: TEdit;
+    Button4: TButton;
+    Button3: TButton;
+    MetropolisUIListBoxItem3: TMetropolisUIListBoxItem;
    procedure FormMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Single);
     procedure FormGesture(Sender: TObject; const EventInfo: TGestureEventInfo;
@@ -67,6 +68,9 @@ type
     procedure MetroListBoxItem6Click(Sender: TObject);
     procedure ToolbarApplyButtonClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     FGestureOrigin: TPointF;
     FGestureInProgress: Boolean;
@@ -85,6 +89,7 @@ var
   Form: TCommonCustomForm;
 // Camera kütüpanesi kullanýlýyor
    Cameras : Camera;
+   camname : Double;
 {$R *.fmx}
 //   Record Nesnesi oluþturuluyor
 ThreadVar
@@ -94,12 +99,16 @@ ThreadVar
 function OpenCam(Parameter : Pointer) : Integer;
 begin
   //ShowMessage(FloatToStr( Cameras.OpenCam(1)));
+
+
   Result := 0;
   msgPtr := Parameter;
-  ShowMessagePos('Thread  '+FloatToStr( Cameras.OpenCam(1)),200*msgPtr.thread, 100);
+  Cameras.OpenCam(camname);
+  //ShowMessagePos('Thread  '+FloatToStr( Cameras.OpenCam(strtofloat(Edit1.text))),200*msgPtr.thread, 100);
   EndThread(0);
 end;
-//- OpenCam-//
+
+// --- //
 
 procedure TFrontPageForm.ToolbarApplyButtonClick(Sender: TObject);
 begin
@@ -123,12 +132,41 @@ var
 begin
 
   msg1.thread := 1; // thread id ...
-  msg1.msg    := 'deneme1';
+  msg1.msg    := Edit1.text;
+  camname:= StrToFloat(Edit1.Text);
   thread1 := BeginThread(nil,0,Addr(OpenCam),Addr(msg1),0,id1);
   CloseHandle(thread1); //  Çalýþtýrýlan thread Temizleniyor ...
 
 end;
  // -- //
+procedure TFrontPageForm.Button2Click(Sender: TObject);
+begin
+  Cameras.CloseCam();
+end;
+
+
+procedure TFrontPageForm.Button3Click(Sender: TObject);
+var
+  C : TMetropolisUIListBoxItem;
+begin
+  C := TMetropolisUIListBoxItem.Create(Self);
+  C.Description := 'Merhaba';
+  C.SubTitle := 'Nasýlsýn';
+  C.Title := 'Ýyimisin';
+  C.Parent := listbox1;
+  c.Width:= 240;
+  c.Height:=250;
+  c.Scale.X:=0.95;
+  C.Scale.Y:=0.95;
+  C.Icon.CreateFromFile('C:\Users\HenGen\Desktop\Delphi\Catch\ProjectFile\Win64\Debug\Cache\0.jpg');
+
+end;
+procedure TFrontPageForm.Button4Click(Sender: TObject);
+begin
+ShowMessage(FloatToStr(Cameras.GetCamList));
+end;
+
+// -- //
 procedure TFrontPageForm.FormGesture(Sender: TObject;
   const EventInfo: TGestureEventInfo; var Handled: Boolean);
 var
